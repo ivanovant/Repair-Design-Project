@@ -3,12 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta  http-equiv="Refresh" content="10; url=https://github.com/ivanvovant/myprojects">
   <title>Тест github pages</title>
 </head>
 <body>
-  <h1>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Имеет рыбными осталось точках до города заманивший оксмокс то вершину.</h1>
-
-  <a href="https://github.com/ivanvovant/myprojects"></a>a href="">ссылка на репозиторий</a>
+  <h1><u>Иванов Антон</u></h1>
+  <h2>Кликните для перехода на мой репозиторий Github - <a href="https://github.com/ivanvovant/myprojects">КЛИК</a>
+  </h2>
+  <span>или переход будет произведен автоматически через</span> 
+  <span class="num">7</span>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    let i = 7;
+    setInterval(() => {
+    if (i <= 0) {
+    location.href = 'https://github.com/ivanovant/myprojects';
+    return false
+    }
+    document.querySelector('.num').innerHTML = --i;
+    }, 1000);
+    });
+    </script> 
+    <span> секунд</span>
 </body>
 </html>
