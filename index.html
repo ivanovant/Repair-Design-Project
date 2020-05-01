@@ -9,7 +9,8 @@
   <h1><u>Иванов Антон</u></h1>
   <h2>Кликните для перехода на мой репозиторий Github - <a href="https://github.com/ivanvovant/myprojects">КЛИК</a>
   </h2>
-  <p>или переход будет произведен автоматически через 7 секунд</p>
+  <span>или переход будет произведен автоматически через</span> 
+  <span class="num">7</span>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
     let i = 7;
@@ -18,9 +19,10 @@
     location.href = 'https://github.com/ivanovant/myprojects';
     return false
     }
-    document.querySelector('p').innerHTML = --i;
+    document.querySelector('.num').innerHTML = --i;
     }, 1000);
     });
     </script> 
+    <span> секунд</span>
 </body>
 </html>
