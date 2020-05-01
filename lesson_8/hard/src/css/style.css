@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #32325f;
+}
+
+.hero{
+  padding-top: 70px;
+  padding-bottom: 190px;
+  background-color: #f4f5f7;
+}
+.container {
+  width: 1140px;
+  max-width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 159px;
+}
+
+.brand {
+  color: #95989a;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.social a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-text {
+  width: 50%;
+}
+
+.subtitle {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.title {
+  display: block;
+  margin-bottom: 26px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.description {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.price-tag {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.price {
+  display: block;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 49px;
+}
+
+.btn {
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(173, 173, 173, 0.16);
+  border-radius: 6px;
+  padding: 20px 30px;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #2dce89;
+  margin-right: 20px;
+}
+
+.btn-primary {
+  background-color: #5e72e4;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-subtitle {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.section-title {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.block {
+  width: 23%;
+  margin-right: 2%;
+}
+
+.block-text {
+  margin: 40px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.footer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #32325f;
+  color: #ffffff;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-wrap a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-block {
+  width: 33%;
+}
+
+.footer-title {
+  margin-bottom: 35px;
+}
+
+.footer p {
+  line-height: 1.4;
+}
+
+.people {
+  display: flex;
+  justify-content: center;
+  background-color: #f4f5f7;
+
+}
+
+.wrap-photo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 63px;
+}
+
+.block-photo {
+  overflow:hidden;
+  position:relative;
+  width:362px;
+  height:254px;
+  margin-bottom: 36px;
+}
+
+.block-photo img {
+  position: absolute;
+  left: 0;
+  top: 0; /* left и top  задаются в зависимости от картинки (смотря какую область нужно отобразить) */
+}
+
+
+
