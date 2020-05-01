@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta  http-equiv="Refresh" content="7; url=https://github.com/ivanvovant/myprojects">
   <title>Иванов Антон</title>
 </head>
 <body>
@@ -11,5 +10,17 @@
   <h2>Кликните для перехода на мой репозиторий Github - <a href="https://github.com/ivanvovant/myprojects">КЛИК</a>
   </h2>
   <p>или переход будет произведен автоматически через 7 секунд</p>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    let i = 7;
+    setInterval(() => {
+    if (i <= 0) {
+    location.href = 'https://github.com/ivanovant/myprojects';
+    return false
+    }
+    document.querySelector('p').innerHTML = --i;
+    }, 1000);
+    });
+    </script> 
 </body>
 </html>
