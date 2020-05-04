@@ -24,7 +24,6 @@ gulp.task('mincss', function() {
 // Watch for css changes
 gulp.task('watch', function() {
   gulp.watch('./css/*.css', gulp.series('mincss'));
-  return
 });
 
 gulp.watch('./css/*.css', function(cb) {
