@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Иванов Антон</title>
+  <title>Repair Design Project</title>
 </head>
 <body>
-  <h1><u>Иванов Антон</u></h1>
-  <h2>Кликните для перехода на мой репозиторий Github - <a href="https://github.com/ivanvovant/myprojects">КЛИК</a>
-  </h2>
-  <span>или переход будет произведен автоматически через</span> 
-  <span class="num">7</span>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    let i = 7;
-    setInterval(() => {
-    if (i <= 0) {
-    location.href = 'https://github.com/ivanovant/myprojects';
-    return false
-    }
-    document.querySelector('.num').innerHTML = --i;
-    }, 1000);
-    });
-    </script> 
-    <span> секунд</span>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <div class="logo menu__logo">Repair Design Project</div>
+        <nav class="nav menu__nav">
+          <a href="#" class="nav__link">Главная</a>
+          <a href="#" class="nav__link">Проекты</a>
+          <a href="#" class="nav__link">Замер</a>
+          <a href="#" class="nav__link">Команда</a>
+          <a href="#" class="nav__link">Отзывы</a>
+          <a href="#" class="nav__link">Контакты</a>
+        </nav>
+        <div class="contacts menu__contacts">
+          <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
+          <button class="button contacts__button button--primary">Заказать звонок</button>
+        </div>
+        <!-- /.contacts -->
+      </div>
+      <!-- /.menu -->
+    </div>
+    <!-- /.container -->
+  </header>
 </body>
 </html>
