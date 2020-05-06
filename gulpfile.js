@@ -1,49 +1,43 @@
-const gulp = require('gulp');
+const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-// sass.compiler = require('node-sass');
+
 
 // Static server
-gulp.task('browser-sync', function() {
+function bs() {
+  serveSass();
+  mincss();
   browserSync.init({
       server: {
           baseDir: "./"
       }
   });
-  gulp.watch("./*.html").on('change', browserSync.reload)
-});
+  watch("./*.html").on('change', browserSync.reload);
+  watch("./sass/**/*.sass", serveSass);
+  watch("./*.html").on('change', browserSync.reload);
+  watch('./css/*.css', mincss);
+};
 
 // Minify css files
-gulp.task('mincss', function() {
-  return gulp.src("./css/*.css")
+function mincss() {
+  return src("./css/*.css")
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min'}))
-    .pipe(gulp.dest("./css/css-min"))
-});
+    .pipe(dest("./css/css-min"))
+    .pipe(browserSync.stream());
+};
 
 // compilate sass files
-gulp.task('sass', function(cb) {
-  return gulp.src('./sass/*.sass')
+function serveSass() {
+  return src('./sass/*.sass')
     .pipe(sass())
-    .pipe(gulp.dest('./css')),
-    cb();
-});
+    .pipe(dest('./css'))
+    .pipe(browserSync.stream());
+};
 
 
-// Watch for css and sass changes
-gulp.task('watch', function() {
-  gulp.watch('./css/*.css', gulp.series('mincss'))
-  gulp.watch('./sass/*.sass', gulp.series('sass'));
-});
 
-gulp.watch('./css/*.css', function(cb) {
-  console.log('seen css changes'),
-  cb();
-});
 
-gulp.watch('./sass/*.sass', function(cb) {
-  console.log('seen sass changes'),
-  cb();
-});
+exports.serve = bs;
