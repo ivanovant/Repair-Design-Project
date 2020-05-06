@@ -74,6 +74,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -314,6 +315,12 @@ template {
 .container {
   max-width: 1256px;
   margin: auto; }
+
+.block {
+  -webkit-animation-name: show;
+  animation-name: show;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
 
 .header {
   background-color: #131313;
