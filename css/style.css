@@ -380,6 +380,9 @@ template {
   color: #ffffff; }
   .hero__content {
     max-width: 670px; }
+  .hero__text {
+    max-width: 500px;
+    font-size: 22px; }
   .hero__instagram {
     position: absolute;
     left: 0;
