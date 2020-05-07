@@ -17,6 +17,7 @@ function bs() {
   });
   watch("./*.html").on('change', browserSync.reload);
   watch("./sass/**/*.sass", serveSass);
+  watch("./sass/**/*.scss", serveSass);
   watch("./*.html").on('change', browserSync.reload);
   // watch('./css/*.css', mincss);
 };
@@ -32,7 +33,7 @@ function bs() {
 
 // compilate sass files
 function serveSass() {
-  return src('./sass/*.sass')
+  return src("./sass/**/*.sass", "./sass/**/*.scss")
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false
