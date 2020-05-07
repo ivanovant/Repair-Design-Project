@@ -1,6 +1,7 @@
 .hero
   position: relative
   background: $dark url(../img/hero-bg.jpg) no-repeat center / cover
+  padding-top: 100px
   height: 100vh
   color: $light
   &__instagram
@@ -9,6 +10,20 @@
     top: 0
     max-width: 80%
     height: 100%
+  &__scroll-down
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    left: 0
+    bottom: 0
+    min-width: 247px
+    min-height: 97px
+    background-color: $dark
+    text-transform: uppercase
+    text-decoration: none
+    color: $light
+
 .instagram
   display: flex
   justify-content: center
