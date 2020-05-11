@@ -1,9 +1,12 @@
 .button
-  padding: 13px 20px
   border: none
   border-radius: 2px
   text-transform: uppercase
   font-family: 'Futura Demi'
+  &:focus 
+    outline-style: none
+    outline-width: 0px
+    outline-color: none
   &:hover
     cursor: pointer
   &--primary
@@ -17,4 +20,13 @@
     border: 1px solid $light
     background-color: transparent
     color: $light
-    
+    &:hover
+      color: $primary
+      border-color: $primary
+.contacts__button 
+  padding: 13px 20px
+.hero__button 
+  padding: 19px 26px
+  min-width: 207px
+  margin-top: 30px
+
