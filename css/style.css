@@ -482,7 +482,6 @@ body {
     bottom: 0;
     min-width: 17.8rem;
     min-height: 7.4rem;
-    margin-bottom: 0.2rem;
     padding-left: 0.31rem;
     background-color: #131313;
     text-transform: uppercase;
@@ -534,7 +533,7 @@ body {
   .title--primary {
     color: #E3B873; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1215px) {
   html {
     font-size: 12px; }
   .nav__link {
@@ -549,6 +548,9 @@ body {
     margin-left: 0; } }
 
 @media screen and (max-width: 570px) {
+  .header {
+    background-color: #666666;
+    padding: 1.85rem 0; }
   .contacts__phone {
     margin-right: 0;
     color: #ffffff;
@@ -558,21 +560,27 @@ body {
   .title {
     font-size: 1.92rem;
     max-width: 27.25rem;
-    line-height: 2.58rem; }
+    line-height: 2.6rem; }
   .hero {
-    max-height: 45rem; }
+    max-height: 44.7rem; }
+    .hero__title {
+      margin-top: 1.7rem; }
     .hero__scroll-down {
       display: none; }
     .hero__content {
-      max-width: 28.17rem; }
+      max-width: 26.5rem; }
     .hero__text {
+      line-height: 2.05rem;
       font-size: 1.5rem;
-      margin-bottom: 3rem; }
+      margin-bottom: 2.7rem; }
     .hero__button {
       display: block;
-      min-width: 27rem;
-      margin-bottom: 1.85rem;
-      font-size: 1.08rem; } }
+      min-width: 28.2rem;
+      padding: 1.5rem 0;
+      margin-bottom: 2.3rem;
+      font-size: 1.08rem; }
+  .control {
+    display: none; } }
 
 @media screen and (max-height: 600px) {
   .hero__scroll-down {
