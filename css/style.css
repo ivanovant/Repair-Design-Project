@@ -593,6 +593,41 @@ img {
 .pricetag__span {
   font-size: 0.7rem; }
 
+.design__section-title {
+  margin-bottom: 2.78rem; }
+
+.design__card {
+  margin-left: 0.4rem; }
+
+.section-title__text {
+  max-width: 52.9rem;
+  margin: 0 auto 3rem auto;
+  font-size: 1.43rem;
+  text-align: center;
+  font-family: Futura Book;
+  text-transform: none;
+  line-height: 1.9rem; }
+
+.section-title__image {
+  margin-bottom: 1.43rem; }
+
+.card__img {
+  position: relative;
+  max-width: 100%; }
+  .card__img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 99%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1; }
+
+.card__text {
+  z-index: 2; }
+
 @media screen and (max-width: 1215px) {
   html {
     font-size: 12px; }
@@ -611,9 +646,23 @@ img {
   .row {
     flex-direction: column;
     align-items: center; }
+  .design {
+    background-color: #131313;
+    color: #ffffff; }
+    .design__card {
+      margin-left: 0;
+      margin-bottom: 4.5rem; }
+    .design__section-title {
+      margin-bottom: 3.1rem; }
+    .design .section-title__text {
+      font-size: 1.25rem;
+      max-width: 25.5rem;
+      line-height: 1.67rem; }
+  .title--dark {
+    color: #131313; }
   .types__card {
     margin-left: 0;
-    margin-bottom: 6.4rem; }
+    margin-bottom: 6.1rem; }
   .types__section-title {
     margin-bottom: 3.4rem; }
   .card__title {
