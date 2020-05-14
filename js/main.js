@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 $(document).ready(function () {
   const modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
-        closeBtn = $('.modal__close');
+        closeBtn = $('.modal__close'),
+        scrollUp = $('.scroll-up__item');
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
@@ -41,4 +42,18 @@ $(document).ready(function () {
     if (modal.is(e.target))
       modal.toggleClass('modal--visible');
   });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+        scrollUp.fadeIn();
+    } else {
+      scrollUp.fadeOut();
+    }
+  });
+  scrollUp.click(function () {
+      $('body,html').animate({
+          scrollTop: 0
+      }, 1200);
+      return false;
+  });
 });
+

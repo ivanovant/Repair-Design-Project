@@ -64,4 +64,29 @@
       border-radius: 1px
       cursor: pointer
       margin-right: 0.616rem
-
+.scroll-up
+  position: fixed
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  right: 8rem
+  left: 0
+  bottom: 5rem
+  z-index: 299
+  &__item
+    display: none
+    position: relative
+    text-transform: uppercase
+    width: 2rem
+    height: 2rem
+    border-radius: 50%
+    background: $dark url(../img/arrow-down.svg) no-repeat center
+    background-size: 1rem
+    transform: rotate(180deg)
+    cursor: pointer
+    transition: 0.2s
+    &:hover
+      transform: rotate(180deg)
+      width: 4rem
+      height: 4rem
+      background-size: 2rem
