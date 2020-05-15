@@ -55,5 +55,25 @@ $(document).ready(function () {
       }, 1200);
       return false;
   });
+
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+
+  let next = $('.swiper-button-next');
+  let prev = $('.swiper-button-prev');
+  let bullets = $('.swiper-pagination');
+
+  next.css('left', prev.width() + 20 + bullets.width() + 20)
+  bullets.css('left', prev.width() + 20)
+
 });
 
