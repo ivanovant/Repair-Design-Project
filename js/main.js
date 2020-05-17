@@ -85,13 +85,12 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2',
     },
-  })
-
+  });
   let next2 = $('.swiper-button-next2');
   let prev2 = $('.swiper-button-prev2');
   let bullets2 = $('.swiper-pagination2');
 
   next2.css('left', prev2.width() + 20 + bullets2.width() + 20)
-  bullets2.css('left', prev2.width() + 20)
+  bullets2.css('left', prev2.width() + 20);
 });
 

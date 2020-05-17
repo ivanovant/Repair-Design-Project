@@ -470,6 +470,8 @@ img {
 
 .section {
   padding: 4.28rem 0; }
+  .section__steps {
+    padding-top: 4.775rem; }
   .section__projects {
     min-height: 1074px;
     background: #131313 url(../img/bg-line.svg) no-repeat center; }
@@ -525,7 +527,7 @@ img {
       z-index: 0;
       left: 0;
       right: 0;
-      top: 40.2rem;
+      top: 39.2rem;
       bottom: 0;
       width: 100%;
       height: 115.36rem;
@@ -536,7 +538,7 @@ img {
       z-index: 1;
       left: 0;
       right: 0;
-      top: 40.2rem;
+      top: 39.2rem;
       bottom: 0;
       width: 100%;
       height: 115.36rem;
@@ -852,7 +854,7 @@ li {
   position: relative;
   max-width: 23.5rem;
   margin: -9.35rem auto;
-  padding: 1.7rem 2.26rem 1rem 2.24rem;
+  padding: 1.8rem 2.26rem 1.1rem 2.24rem;
   background-color: #ffffff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
   z-index: 2; }
@@ -874,7 +876,7 @@ li {
 .design-card__pricetag {
   position: absolute;
   left: 0;
-  bottom: -2.2rem;
+  bottom: -1.9rem;
   min-width: 16.2rem;
   font-size: 1.29rem;
   font-family: Yeseva One, cursive;
@@ -890,27 +892,61 @@ li {
 .swiper-slide__description {
   max-width: 24.07rem;
   flex-basis: 30%;
+  margin: 0;
   margin-right: 1.65rem;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1rem;
   line-height: 1.786rem;
   padding-bottom: 0;
   font-size: 1.07rem; }
+  .swiper-slide__description--second {
+    max-width: 21rem; }
 
 .swiper-slide__text--wide {
   flex-basis: auto;
-  margin-bottom: 4.46rem; }
+  margin-bottom: 2.9rem; }
+
+.swiper-pagination-current {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  color: #ffffff; }
+
+.swiper-pagination-total {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  color: #ffffff; }
 
 .swiper__counter {
   display: inline-block;
   font-family: Yeseva One;
-  letter-spacing: -0.1rem;
-  font-size: 1.286rem; }
+  letter-spacing: -0.2rem;
+  font-size: 1.286rem;
+  margin-bottom: 1.7rem; }
 
 .swiper-slide__heading--primary {
-  max-width: 18.71rem; }
+  max-width: 18.71rem;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+  margin: 0;
+  margin-bottom: 0.7rem; }
+
+.section__col {
+  padding-left: 0.25rem; }
+
+.section-steps-title__word {
+  display: flex;
+  align-items: center; }
+  .section-steps-title__word::after {
+    content: '';
+    width: 92px;
+    height: 2px;
+    background-color: #E3B873;
+    margin-left: 6.5rem; }
 
 .section-steps__title {
-  margin-bottom: 7rem; }
+  margin-bottom: 6.2rem; }
 
 .section__slide-heading {
   display: flex;
@@ -919,9 +955,19 @@ li {
   .section__slide-heading-box {
     display: flex;
     flex-direction: column;
-    flex-basis: 32%;
-    margin-bottom: 2.57rem;
-    color: #959595; }
+    flex-basis: 31%;
+    margin-bottom: 3.1rem;
+    color: #959595;
+    max-width: 10rem;
+    margin-right: 7rem; }
+    .section__slide-heading-box:nth-of-type(3) {
+      margin-right: 0;
+      max-width: 7.6rem;
+      padding-left: 0.7rem; }
+    .section__slide-heading-box:nth-of-type(6) {
+      margin-right: 0;
+      max-width: 7.6rem;
+      padding-left: 0.7rem; }
     .section__slide-heading-box .box-active {
       color: #ffffff; }
 
@@ -930,20 +976,27 @@ li {
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem; }
+  margin-bottom: 0.8rem; }
   .section__slide-num::after {
     content: '';
-    width: 1.34rem;
-    height: 0.07rem;
+    width: 1.3rem;
+    height: 0.11rem;
     background-color: rgba(227, 184, 115, 0.3); }
     .section__slide-num::after .after-active {
       background-color: #E3B873; }
 
 .section__slide-title {
-  max-width: 9.07rem; }
+  max-width: 9.57rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.19rem; }
+
+.steps__heading {
+  letter-spacing: -0.01rem;
+  margin-top: 1rem; }
 
 .slide-heading__wrap {
-  padding-top: 7rem; }
+  padding-top: 6.5rem;
+  margin-bottom: 0.6rem; }
 
 .modal {
   opacity: 0;
@@ -1153,7 +1206,7 @@ li {
       margin-bottom: 2.17rem;
       font-size: 1.08rem; }
   .section__wrap {
-    margin-bottom: 0.6rem; }
+    margin-bottom: 0.5rem; }
   .section__projects {
     padding-top: 2.1rem; }
   .section-title__heading {
