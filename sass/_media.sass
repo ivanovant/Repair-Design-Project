@@ -12,32 +12,103 @@
       display: none
     &__content
       margin-left: 0
+    &__scroll-down
+      &:hover
+        color: $light
+        cursor: default
+  .button
+    &:hover
+      cursor: default
+    &--primary
+      &:hover
+        box-shadow: 0px 5px 15px rgba($primary, 0.2)
+    &--outline
+      &:hover
+        border-color: $light
+        color: $light
+  .scroll-up
+    &__item
+      cursor: default
+      &:hover
+        cursor: default
+        transform: rotate(180deg)
+        width: 2rem
+        height: 2rem
+        background-size: 1rem
+  .swiper
+    &-button
+      &-prev, &-next
+        cursor: default
+    &-slide
+      &__text
+        flex-basis: 31%
+  .logo
+    &__link
+      &:hover 
+        color: $primary
+        cursor: default
+  .phone
+    &:hover
+      color: $primary
+      cursor: default
+  .col-45
+    max-width: 85%
+  .col-55
+    max-width: 85%
+  .col-30
+    max-width: 49%
+  .row
+    align-items: flex-start
+    flex-wrap: wrap
+  .section
+    &__wrap
+      margin-bottom: 1.4rem
+  .types
+    &__card
+      margin-bottom: 3.7rem
+  .design
+    &__card
+      margin-bottom: 3.7rem
+
 @media screen and ( max-width: 798px )
   .row
     flex-direction: column
     align-items: center
+  .col-30
+    max-width: 75%
+  .section
+    &__design
+      background-color: $dark
+      color: $light
+      &__card
+        margin-left: 0
+        margin-bottom: 4.5rem
+      &__section-title
+        margin-bottom: 3.1rem
+      .section-title
+        &__text
+          font-size: 1.25rem
+          max-width: 25.5rem
+          line-height: 1.75rem
+          padding-top: 1.7rem
   .design
-    background-color: $dark
-    color: $light
+    &__heading
+      margin-bottom: 1rem
     &__card
-      margin-left: 0
-      margin-bottom: 4.5rem
-    &__section-title
-      margin-bottom: 3.1rem
-    .section-title
-      &__text
-        font-size: 1.25rem
-        max-width: 25.5rem
-        line-height: 1.67rem
+      margin-bottom: 6.5rem
   .title--dark
     color: $dark
   .types
     &__card
       margin-left: 0
-      margin-bottom: 6.1rem
+      margin-bottom: 6.47rem
     &__section-title
       margin-bottom: 3.4rem
   .card
+    &__img
+      max-width: 100%
+      &::after
+        display: none
     &__title
       margin-top: 0.6rem
       margin-bottom: 0.5rem
@@ -52,13 +123,13 @@
     &__pricetag
       margin-left: 0
       text-align: center
-      padding: 1rem 0
+      padding: 1rem 0 1rem 0rem
       bottom: -1.5rem
       min-width: 15.9rem
+      letter-spacing: -0.02rem
   .section-title
     &__heading
       font-size: 1.83rem
-
 @media screen and ( max-width: 570px )
   .header 
     padding: 1.85rem 0
@@ -72,11 +143,15 @@
   .title
     font-size: 1.92rem
     max-width: 27.25rem
-    line-height: 2.6rem
+    line-height: 2.5rem
   .hero
-    max-height: 44.7rem
+    max-height: 44.3rem
+    &::after
+      display: none
+    &__container
+      margin-top: 4.59rem
     &__title
-      margin-top: 1.7rem
+      margin-bottom: 1.15rem
     &__scroll-down
       display: none
     &__content
@@ -84,17 +159,112 @@
     &__text
       line-height: 2.05rem
       font-size: 1.5rem
-      margin-bottom: 2.7rem
+      margin-bottom: 2.8rem
     &__button
       display: block
       min-width: 28.2rem
       padding: 1.5rem 0
-      margin-bottom: 2.3rem
+      margin-bottom: 2.17rem
       font-size: 1.08rem
+  .section
+    &__wrap
+      margin-bottom: 1.4rem
+    &__projects
+      padding-top: 2.1rem
+    &-title
+      &__heading
+        &--primary
+          letter-spacing: -0.13rem
+          margin-bottom: 2rem
+      &__word
+        &::after
+          display: none
+      &__text
+        &--left
+          line-height: 1.91rem
+          max-width: 25rem
+          font-size: 1.167rem
+      &__image
+        margin: 0
+        &::before
+          width: 2.66rem
+          height: 0.18rem
+          margin: 0
+          margin-right: 0.9rem
+        &::after
+          margin: 0
+          margin-left: 1rem
+          width: 2.66rem
+          height: 0.18rem
+  .types
+    &__section
+      &-title
+        margin-bottom: 3.1rem
+    &__card
+      margin-bottom: 
+  .card
+    &__text
+      max-width: 22.5rem
+      margin-top: -11.9rem
+      padding: 1.2rem 1.7rem 1rem 2.5rem
+    &__title
+      letter-spacing: -0.014rem
+    &__pricetag
+      bottom: -1.7rem
+  li
+    list-style: none
+    display: flex
+    align-items: center
+    margin-left: -0.7rem
+    &::before
+      content: ''
+      display: inline-block
+      height: 4px
+      width: 4px
+      margin-right: 5px
+      border-radius: 50%
+      background-color: $secondary
   .control
     display: none
-
+  .col-30
+    max-width: 100%
+  .col-45
+    max-width: 28.3rem
+  .col-55
+    max-width: 100%
+  .swiper
+    &-slide
+      &__text
+        min-width: 35%
+        margin-right: 3.5rem
+        margin-bottom: 1.1rem
+        &:nth-of-type(3)
+          margin-right: 3.5rem
+          margin-bottom: 5.55rem
+      &__heading
+        font-size: 1.167rem
+        margin-bottom: 0.81rem
+      &__value
+        font-size: 1.167rem
+        letter-spacing: 0.1px
+        font-size: 1.167rem
+        line-height: 1.6rem
+  .swiper-container-horizontal>.swiper-pagination-bullets
+    bottom: 1.3rem
 @media screen and ( max-height: 600px )
   .hero
     &__scroll-down
       display: none
+@media screen and ( max-width: 380px )
+  body
+    overflow-x: hidden
+  .button
+    min-width: 0
+    &--primary
+      padding: 1.5rem 5.15rem
+      margin-right: 0
+    &--outline
+      padding: 1.5rem 6.5rem
+      margin-right: 0
+  .row
+    align-items: baseline

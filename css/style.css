@@ -437,17 +437,20 @@ template {
 
 .row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between; }
 
 .col-30 {
-  flex-basis: 33%; }
+  max-width: 32%; }
 
 .col-45 {
-  width: 45%; }
+  max-width: 45%; }
 
 .col-55 {
-  width: 55%; }
+  max-width: 55%; }
+
+.col-70 {
+  max-width: 68%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -484,6 +487,11 @@ img {
         font-size: 1.928rem;
         letter-spacing: -2px;
         margin-top: 0.9rem; }
+    .section-title__subtitle {
+      font-family: Futura Demi;
+      text-transform: uppercase;
+      font-size: 1.07rem;
+      line-height: 1.5rem; }
     .section-title__word {
       display: flex;
       align-items: center; }
@@ -776,28 +784,79 @@ img {
 .design__section-title {
   margin-bottom: 2rem; }
 
-.design__card {
-  margin-left: 0.4rem; }
-
 .section-title__image {
   margin-bottom: 1.43rem; }
 
 .card__img {
   position: relative;
   max-width: 100%; }
-  .card__img::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    max-height: 99%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1; }
 
-.card__text {
+.card__box-img::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1; }
+
+.design-card__text {
+  position: relative;
+  max-width: 22.5rem;
+  margin-top: -12.2rem;
+  padding: 1.7rem 2rem 1rem 2.55rem;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
   z-index: 2; }
+
+.design-card__title {
+  font-family: Yeseva One;
+  font-size: 1.29rem;
+  margin-top: 0;
+  margin-bottom: 0.9rem; }
+
+.design-card__list {
+  padding: 0 0 0 1rem;
+  margin: 0;
+  font-size: 1.07rem;
+  line-height: 1.9rem;
+  color: #959595;
+  margin-bottom: 2.5rem; }
+
+.design-card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: -1.6rem;
+  min-width: 15.85rem;
+  font-size: 1.29rem;
+  font-family: Yeseva One, cursive;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #E3B873;
+  color: #ffffff;
+  padding: 1rem 2.6rem;
+  letter-spacing: 0rem; }
+
+.pricetag__span {
+  font-size: 0.7rem; }
+
+.swiper-slide__description {
+  max-width: 24.07rem;
+  flex-basis: 30%;
+  margin-right: 1.65rem;
+  margin-bottom: 1.35rem;
+  line-height: 1.45rem;
+  padding-bottom: 0; }
+
+.swiper-slide__text--wide {
+  flex-basis: auto; }
+
+.section__slide-heading {
+  display: flex;
+  flex-wrap: wrap; }
 
 .modal {
   opacity: 0;
@@ -871,31 +930,85 @@ img {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .hero__scroll-down:hover {
+    color: #ffffff;
+    cursor: default; }
+  .button:hover {
+    cursor: default; }
+  .button--primary:hover {
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2); }
+  .button--outline:hover {
+    border-color: #ffffff;
+    color: #ffffff; }
+  .scroll-up__item {
+    cursor: default; }
+    .scroll-up__item:hover {
+      cursor: default;
+      transform: rotate(180deg);
+      width: 2rem;
+      height: 2rem;
+      background-size: 1rem; }
+  .swiper-button-prev, .swiper-button-next {
+    cursor: default; }
+  .swiper-slide__text {
+    flex-basis: 31%; }
+  .logo__link:hover {
+    color: #E3B873;
+    cursor: default; }
+  .phone:hover {
+    color: #E3B873;
+    cursor: default; }
+  .col-45 {
+    max-width: 85%; }
+  .col-55 {
+    max-width: 85%; }
+  .col-30 {
+    max-width: 49%; }
+  .row {
+    align-items: flex-start;
+    flex-wrap: wrap; }
+  .section__wrap {
+    margin-bottom: 1.4rem; }
+  .types__card {
+    margin-bottom: 3.7rem; }
+  .design__card {
+    margin-bottom: 3.7rem; } }
 
 @media screen and (max-width: 798px) {
   .row {
     flex-direction: column;
     align-items: center; }
-  .design {
+  .col-30 {
+    max-width: 75%; }
+  .section__design {
     background-color: #131313;
     color: #ffffff; }
-    .design__card {
+    .section__design__card {
       margin-left: 0;
       margin-bottom: 4.5rem; }
-    .design__section-title {
+    .section__design__section-title {
       margin-bottom: 3.1rem; }
-    .design .section-title__text {
+    .section__design .section-title__text {
       font-size: 1.25rem;
       max-width: 25.5rem;
-      line-height: 1.67rem; }
+      line-height: 1.75rem;
+      padding-top: 1.7rem; }
+  .design__heading {
+    margin-bottom: 1rem; }
+  .design__card {
+    margin-bottom: 6.5rem; }
   .title--dark {
     color: #131313; }
   .types__card {
     margin-left: 0;
-    margin-bottom: 6.1rem; }
+    margin-bottom: 6.47rem; }
   .types__section-title {
     margin-bottom: 3.4rem; }
+  .card__img {
+    max-width: 100%; }
+    .card__img::after {
+      display: none; }
   .card__title {
     margin-top: 0.6rem;
     margin-bottom: 0.5rem; }
@@ -910,9 +1023,10 @@ img {
   .card__pricetag {
     margin-left: 0;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem 0 1rem 0rem;
     bottom: -1.5rem;
-    min-width: 15.9rem; }
+    min-width: 15.9rem;
+    letter-spacing: -0.02rem; }
   .section-title__heading {
     font-size: 1.83rem; } }
 
@@ -928,11 +1042,15 @@ img {
   .title {
     font-size: 1.92rem;
     max-width: 27.25rem;
-    line-height: 2.6rem; }
+    line-height: 2.5rem; }
   .hero {
-    max-height: 44.7rem; }
+    max-height: 44.3rem; }
+    .hero::after {
+      display: none; }
+    .hero__container {
+      margin-top: 4.59rem; }
     .hero__title {
-      margin-top: 1.7rem; }
+      margin-bottom: 1.15rem; }
     .hero__scroll-down {
       display: none; }
     .hero__content {
@@ -940,16 +1058,101 @@ img {
     .hero__text {
       line-height: 2.05rem;
       font-size: 1.5rem;
-      margin-bottom: 2.7rem; }
+      margin-bottom: 2.8rem; }
     .hero__button {
       display: block;
       min-width: 28.2rem;
       padding: 1.5rem 0;
-      margin-bottom: 2.3rem;
+      margin-bottom: 2.17rem;
       font-size: 1.08rem; }
+  .section__wrap {
+    margin-bottom: 1.4rem; }
+  .section__projects {
+    padding-top: 2.1rem; }
+  .section-title__heading--primary {
+    letter-spacing: -0.13rem;
+    margin-bottom: 2rem; }
+  .section-title__word::after {
+    display: none; }
+  .section-title__text--left {
+    line-height: 1.91rem;
+    max-width: 25rem;
+    font-size: 1.167rem; }
+  .section-title__image {
+    margin: 0; }
+    .section-title__image::before {
+      width: 2.66rem;
+      height: 0.18rem;
+      margin: 0;
+      margin-right: 0.9rem; }
+    .section-title__image::after {
+      margin: 0;
+      margin-left: 1rem;
+      width: 2.66rem;
+      height: 0.18rem; }
+  .types__section-title {
+    margin-bottom: 3.1rem; }
+  .card__text {
+    max-width: 22.5rem;
+    margin-top: -11.9rem;
+    padding: 1.2rem 1.7rem 1rem 2.5rem; }
+  .card__title {
+    letter-spacing: -0.014rem; }
+  .card__pricetag {
+    bottom: -1.7rem; }
+  li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: -0.7rem; }
+    li::before {
+      content: '';
+      display: inline-block;
+      height: 4px;
+      width: 4px;
+      margin-right: 5px;
+      border-radius: 50%;
+      background-color: #959595; }
   .control {
-    display: none; } }
+    display: none; }
+  .col-30 {
+    max-width: 100%; }
+  .col-45 {
+    max-width: 28.3rem; }
+  .col-55 {
+    max-width: 100%; }
+  .swiper-slide__text {
+    min-width: 35%;
+    margin-right: 3.5rem;
+    margin-bottom: 1.1rem; }
+    .swiper-slide__text:nth-of-type(3) {
+      margin-right: 3.5rem;
+      margin-bottom: 5.55rem; }
+  .swiper-slide__heading {
+    font-size: 1.167rem;
+    margin-bottom: 0.81rem; }
+  .swiper-slide__value {
+    font-size: 1.167rem;
+    letter-spacing: 0.1px;
+    font-size: 1.167rem;
+    line-height: 1.6rem; }
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 1.3rem; } }
 
 @media screen and (max-height: 600px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 380px) {
+  body {
+    overflow-x: hidden; }
+  .button {
+    min-width: 0; }
+    .button--primary {
+      padding: 1.5rem 5.15rem;
+      margin-right: 0; }
+    .button--outline {
+      padding: 1.5rem 6.5rem;
+      margin-right: 0; }
+  .row {
+    align-items: baseline; } }
