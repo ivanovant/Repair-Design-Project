@@ -5,15 +5,61 @@
       flex-basis: 30%
       margin-right: 1.65rem
       margin-bottom: 1.35rem
-      line-height: 1.45rem
+      line-height: 1.786rem
       padding-bottom: 0
+      font-size: 1.07rem
     &__text
       &--wide
         flex-basis: auto
-
-
+        margin-bottom: 4.46rem
+  &__counter
+    display: inline-block
+    font-family: Yeseva One
+    letter-spacing: -0.1rem
+    font-size: 1.286rem
+  &-slide
+    &__heading
+      &--primary
+        max-width: 18.71rem
 .section
+  &-steps
+    &__title
+      margin-bottom: 7rem
+  &-title
+    &--left
+      margin-bottom: 
   &__slide
     &-heading
       display: flex
       flex-wrap: wrap
+      justify-content: space-between
+      &-box
+        display: flex
+        flex-direction: column
+        flex-basis: 32%
+        margin-bottom: 2.57rem
+        color: $secondary
+        .box-active
+          color: $light
+    &-num
+      font-family: Yeseva One
+      font-size: 1.2rem
+      display: flex
+      flex-direction: column
+      margin-bottom: 1rem
+      &::after
+        content: ''
+        width: 1.34rem
+        height: 0.07rem
+        background-color: rgba(227, 184, 115, 0.3)
+        .after-active
+          background-color: $primary
+          
+    &-title
+      max-width: 9.07rem
+      
+      
+.slide
+  &-heading
+    &__wrap
+      padding-top: 7rem
