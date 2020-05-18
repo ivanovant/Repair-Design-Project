@@ -1113,7 +1113,16 @@ li {
   .types__card {
     margin-bottom: 3.7rem; }
   .design__card {
-    margin-bottom: 13rem; } }
+    margin-bottom: 13rem; }
+  .modal__input {
+    outline: none; }
+  .modal__close:hover {
+    background: transparent url("../img/close.svg") no-repeat center;
+    cursor: default; }
+  .policy__label {
+    cursor: default; }
+    .policy__label::before {
+      cursor: default; } }
 
 @media screen and (max-width: 798px) {
   .row {
