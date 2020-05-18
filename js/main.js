@@ -76,7 +76,6 @@ $(document).ready(function () {
   bullets.css('left', prev.width() + 20)
 
   var swiper2 = new Swiper ('.swiper2', {
-    loop: true,
     pagination: {
       el: '.swiper-pagination2',
       type: 'bullets',
@@ -86,11 +85,66 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev2',
     },
   });
+
   let next2 = $('.swiper-button-next2');
   let prev2 = $('.swiper-button-prev2');
   let bullets2 = $('.swiper-pagination2');
-
+  const slide = $('.steps-slide')
+  const active = $('.steps-slide.swiper-slide-active')
+  const counter = $('.swiper-slide-counter')
   next2.css('left', prev2.width() + 20 + bullets2.width() + 20)
   bullets2.css('left', prev2.width() + 20);
-});
 
+  let totalSlides = slide.length;
+  let currentSlide = active.index() + 1;
+  let down_index;
+  counter.html('' + currentSlide + '/' + totalSlides + '');
+  next2.on('click', () => {
+    let currentSlide_active = $('.steps-slide.swiper-slide-active').index() + 1;
+    if (currentSlide_active <= totalSlides) {
+      down_index = $('.steps-slide.swiper-slide-active').index() + 1,
+      counter.html('' + currentSlide_active + '/' + totalSlides + '');
+      $('.section__slide-heading-box').each(function(e) {
+        if (e === currentSlide_active - 1) {
+          $(this).addClass('box--active')
+        } else {
+          $(this).removeClass('box--active')
+        }
+     })
+    };
+  });
+  prev2.on('click', () => {
+    down_index = down_index - 1;
+    if (down_index >= 1) {
+      counter.html('' + down_index + '/' + totalSlides + '');
+    $('.section__slide-heading-box').each(function(e) {
+      if (e === down_index - 1) {
+        $(this).addClass('box--active')
+      } else {
+        $(this).removeClass('box--active')
+      }
+     })
+    };
+  });
+
+  $('.section__slide-heading-box').each(function(e) {
+    if (e === 0) {
+      $(this).addClass('box--active');
+    }
+  });
+
+  $('.section__slide-heading-box').on('click', (e) => {
+    const id = e.target.id - 1
+    swiper2[0].slideTo(id)
+    swiper2[1].slideTo(id)
+    counter.html('' + (id + 1) + '/' + totalSlides + '');
+    $('.section__slide-heading-box').each(function(e) {
+      if (e === id) {
+        $(this).addClass('box--active')
+      } else {
+        $(this).removeClass('box--active')
+      }
+     })
+  });
+
+});

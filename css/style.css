@@ -889,6 +889,19 @@ li {
 .pricetag__span {
   font-size: 0.7rem; }
 
+.swiper__image {
+  max-width: 762px;
+  max-height: 376px; }
+
+.swiper-slide-counter {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: Yeseva One;
+  color: #fff;
+  font-size: 1.286rem;
+  margin-bottom: 1.7rem; }
+
 .swiper-slide__description {
   max-width: 24.07rem;
   flex-basis: 30%;
@@ -905,24 +918,8 @@ li {
   flex-basis: auto;
   margin-bottom: 2.9rem; }
 
-.swiper-pagination-current {
-  position: absolute;
-  bottom: 5rem;
-  left: 0;
-  color: #ffffff; }
-
-.swiper-pagination-total {
-  position: absolute;
-  bottom: 5rem;
-  left: 0;
-  color: #ffffff; }
-
 .swiper__counter {
-  display: inline-block;
-  font-family: Yeseva One;
-  letter-spacing: -0.2rem;
-  font-size: 1.286rem;
-  margin-bottom: 1.7rem; }
+  display: inline-block; }
 
 .swiper-slide__heading--primary {
   max-width: 18.71rem;
@@ -957,9 +954,11 @@ li {
     flex-direction: column;
     flex-basis: 31%;
     margin-bottom: 3.1rem;
-    color: #959595;
+    color: #ffffff;
+    opacity: 0.3;
     max-width: 10rem;
-    margin-right: 7rem; }
+    margin-right: 7rem;
+    cursor: pointer; }
     .section__slide-heading-box:nth-of-type(3) {
       margin-right: 0;
       max-width: 7.6rem;
@@ -968,8 +967,6 @@ li {
       margin-right: 0;
       max-width: 7.6rem;
       padding-left: 0.7rem; }
-    .section__slide-heading-box .box-active {
-      color: #ffffff; }
 
 .section__slide-num {
   font-family: Yeseva One;
@@ -979,11 +976,9 @@ li {
   margin-bottom: 0.8rem; }
   .section__slide-num::after {
     content: '';
-    width: 1.3rem;
-    height: 0.11rem;
-    background-color: rgba(227, 184, 115, 0.3); }
-    .section__slide-num::after .after-active {
-      background-color: #E3B873; }
+    width: 1.4rem;
+    height: 0.12rem;
+    background-color: #E3B873; }
 
 .section__slide-title {
   max-width: 9.57rem;
@@ -997,6 +992,9 @@ li {
 .slide-heading__wrap {
   padding-top: 6.5rem;
   margin-bottom: 0.6rem; }
+
+.box--active {
+  opacity: 1; }
 
 .modal {
   opacity: 0;
@@ -1110,6 +1108,8 @@ li {
     flex-wrap: wrap; }
   .section__wrap {
     margin-bottom: 1.4rem; }
+  .section__steps {
+    display: none; }
   .types__card {
     margin-bottom: 3.7rem; }
   .design__card {
