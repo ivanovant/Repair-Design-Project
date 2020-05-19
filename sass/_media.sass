@@ -144,6 +144,13 @@
   .section-title
     &__heading
       font-size: 1.83rem
+  .control
+    &__input
+      &-group
+        max-width: 15.8rem
+  .input
+    &--dark
+      padding: 0.04rem 1rem 0.58rem 0rem
 @media screen and ( max-width: 570px )
   .header 
     padding: 1.85rem 0
@@ -185,12 +192,18 @@
       margin-bottom: 0.5rem
     &__projects
       padding-top: 2.1rem
+      padding-bottom: 24.2rem
+      background: $mobile-dark
     &-title
+      &--light
+        margin-bottom: 3.4rem
       &__heading
         margin-bottom: 1rem
         &--primary
           letter-spacing: -0.13rem
           margin-bottom: 2rem
+        &--light
+          margin-bottom: 1.4rem
       &__word
         &::after
           display: none
@@ -213,18 +226,87 @@
           margin-left: 1rem
           width: 2.66rem
           height: 0.18rem
+    &__control
+      padding: 4.28rem 0 3.88rem 0
+    &__types
+      padding: 5.2rem 0
+    &-types
+      &__heading
+        margin-bottom: 1.5rem
+  .control
+    background-color: $mobile-dark
+    color: $light
+    &__video
+      max-width: 28rem
+      min-height: 17.2rem
+      margin-bottom: 2.4rem
+      background: $dark url('../img/video-mask-mobile.jpg') no-repeat center
+    &__text
+      max-width: 29rem
+      width: 29rem
+
+      margin-bottom: 2.5rem
+      font-size: 1.167rem
+      line-height: 2rem
+      &::before
+        margin-bottom: 1.2rem
+    &__form
+      min-height: 20rem
+      flex-direction: column
+    &__input
+      &::placeholder
+        letter-spacing: 0.05rem
+        color: $light
+        font-size: 1.38rem
+      &-group
+        margin-bottom: 0.9rem
+        &:first-of-type
+          margin-bottom: 5.2rem
+    &__policy
+      &-label
+        justify-content: start
+        margin-top: 0
+        margin-bottom: 5.2rem
+        font-size: 1.3rem
+        letter-spacing: 0.015rem
+        &::before
+          width: 1.5rem
+          height: 1.5rem
+    &__button
+      order: 5
+      font-size: 1.3rem
+      margin-bottom: -6rem
+      max-width: 28rem
+      padding: 1.45rem 10.6rem
+  .label
+    &-mobile
+      &--light
+        color: rgba($light, 0.5)
+        font-size: 1.2rem
+  .video
+    &__play
+      max-width: 5.2rem
+  .input
+    &--dark
+      padding: 0.04rem 3rem 0.6rem 0rem
+      width: 28rem
+      border-bottom: 1px solid rgba(54, 54, 54, 1)
   .types
     &__section
       &-title
-        margin-bottom: 3.4rem
+        margin-bottom: 3.2rem
+    &__card
+      margin-bottom: 6.8rem
   .design
     &__card
       margin-bottom: 18.7rem
+      &:only-of-type
+        margin-bottom: 18.5rem
     &-card
       &__text
         position: relative
         max-width: 22.5rem
-        margin: -12.2rem 0
+        margin: -11.9rem 0
         padding: 1.7rem 2rem 1.1rem 2.4rem
         background-color: $light
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
@@ -277,7 +359,7 @@
       margin-right: 5px
       border-radius: 50%
       background-color: $secondary
-  .control
+  .steps
     display: none
   .col-30
     max-width: 100%
@@ -308,16 +390,28 @@
   .hero
     &__scroll-down
       display: none
-@media screen and ( max-width: 380px )
+@media screen and ( max-width: 360px )
   body
     overflow-x: hidden
   .button
     min-width: 0
     &--primary
-      padding: 1.5rem 5.15rem
+      padding: 1.5rem 5.85rem
       margin-right: 0
     &--outline
-      padding: 1.5rem 6.5rem
+      padding: 1.5rem 7.2rem
       margin-right: 0
   .row
     align-items: baseline
+  .input
+    &--dark
+      width: 25rem
+  .col-45
+    max-width: 100%
+  .control
+    &__text
+      width: 100%
+  .swiper
+    &-slide
+      &__text
+        min-width: 30%

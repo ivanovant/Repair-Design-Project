@@ -31,19 +31,23 @@
     padding: 1.28rem 1.86rem
     min-width: 14.79rem
     margin-right: 1.2rem
+
 .label
   font-size: 1.07rem
   &--light
     color: rgba($light, 0.5)
+  &--dark
+    color: rgba(54, 54, 54, 0.5)
 .input
   border: none
-  border-bottom: 1px solid rgba($light, 0.15)
   background-color: transparent
   font-size: 1.31rem
-  color: $light
-  padding: 0.35rem 0rem 0.58rem
-  &::placeholder  
-    color: $light
+  &--light
+    border-bottom: 1px solid rgba($light, 0.15)
+    padding: 0.35rem 0rem 0.58rem
+  &--dark
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+    padding: 0.04rem 4rem 0.45rem 0rem
 .policy
   &__checkbox
     opacity: 0

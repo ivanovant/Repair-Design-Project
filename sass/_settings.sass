@@ -13,14 +13,28 @@ img
   &__steps
     padding-top: 4.775rem
   &__projects
-    min-height: 1074px
+    padding-bottom: 28.5rem
     background: $dark url(../img/bg-line.svg) no-repeat center
+  &__types
+    padding: 4.9rem 0
   &-title
     text-align: center
     font-weight: normal
     &--left
       text-align: left
       margin-bottom: 0.1rem
+    &--light
+      color: $light
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &::before, &::after
+        content: ''
+        width: 2.29rem
+        height: 0.14rem
+        background-color: $primary
+        margin: 0 0.71rem
     &__heading
       font-family: Yeseva One
       text-transform: uppercase
@@ -31,6 +45,9 @@ img
         font-size: 1.928rem
         letter-spacing: -2px
         margin-top: 0.9rem
+      &--light
+        margin: 0
+        margin-bottom: 1rem
     &__subtitle
       font-family: Futura Demi
       text-transform: uppercase
@@ -61,14 +78,13 @@ img
         text-align: center
   &__design
     position: relative
-
     &::before
       content: ''
       position: absolute
       z-index: 0
       left: 0
       right: 0
-      top: 39.2rem
+      top: 38.8rem
       bottom: 0
       width: 100%
       height: 115.36rem
@@ -79,22 +95,13 @@ img
       z-index: 1
       left: 0
       right: 0
-      top: 39.2rem
+      top: 38.8rem
       bottom: 0
       width: 100%
       height: 115.36rem
       background:url(../img/design/design-bg-lines.svg) no-repeat center
       opacity: 0.3
-    &__image
-      display: flex
-      justify-content: center
-      align-items: center
-      &::before, &::after
-        content: ''
-        width: 2.29rem
-        height: 0.14rem
-        background-color: $primary
-        margin: 0 0.71rem
+
   &--dark
     background-color: $dark
     color: $light

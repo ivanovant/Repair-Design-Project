@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   modalBtn.forEach(element => {
     element.addEventListener('click', switchModal);
   });
-
   closeBtn.addEventListener('click', switchModal);
-
   document.addEventListener('keydown', (event) => {
     if (event.key === "Escape" && modal.classList.contains('modal--visible')) {
         switchModal();
