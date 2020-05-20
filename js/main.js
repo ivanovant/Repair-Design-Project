@@ -159,7 +159,8 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      policyCheckbox: "required"
     },
     messages: {
       userName: {
@@ -171,7 +172,8 @@ $(document).ready(function () {
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
-      }
+      },
+      policyCheckbox: "Заполните поле"
     }  
   });
 
@@ -184,7 +186,8 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required"
+      userPhone: "required",
+      controlPolicyCheckbox: "required"
     },
     messages: {
       userName: {
@@ -192,7 +195,8 @@ $(document).ready(function () {
         minlength: "Имя не короче двух букв",
         maxlength: "Имя не длиннее пятнадцати букв"
       },
-      userPhone: "Заполните поле"
+      userPhone: "Заполните поле",
+      controlPolicyCheckbox: "Заполните поле"
     }  
   });
 
@@ -209,7 +213,8 @@ $(document).ready(function () {
       userQuestion: {
         required:true,
         minlength: 10
-      }
+      },
+      footerPolicyCheckbox: "required"
     },
     messages: {
       userName: {
@@ -221,7 +226,8 @@ $(document).ready(function () {
       userQuestion: {
         required: "Напишите ваш вопрос",
         minlength: "В вопросе должно быть не менее 10 символов"
-      }
+      },
+      footerPolicyCheckbox: "Заполните поле"
     }  
   });
 

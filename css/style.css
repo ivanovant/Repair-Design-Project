@@ -480,6 +480,24 @@ input.invalid {
   left: 0;
   color: tomato; }
 
+#policyCheckbox-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+  color: tomato; }
+
+#footerPolicyCheckbox-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 10.3rem;
+  color: tomato; }
+
+#controlPolicyCheckbox-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 17.7rem;
+  color: tomato; }
+
 .container {
   width: 90%;
   max-width: 1256px;
@@ -879,6 +897,7 @@ img {
   font-size: 1.0714rem; }
 
 .control__policy {
+  position: relative;
   flex-basis: 100%;
   padding-right: 4.5rem; }
   .control__policy-label {
@@ -1163,6 +1182,7 @@ li {
     .footer__input::placeholder {
       color: #ffffff; }
   .footer__policy {
+    position: relative;
     flex-basis: 100%;
     margin-bottom: 3.53rem;
     padding-right: 1.4rem; }
@@ -1272,7 +1292,8 @@ li {
     .modal__input:last-of-type {
       margin-bottom: -0.1rem; }
   .modal__policy {
-    margin-bottom: 2.7rem; }
+    margin-bottom: 2.7rem;
+    position: relative; }
   .modal__button {
     align-self: flex-end;
     padding: 1.35rem 3.2rem;
