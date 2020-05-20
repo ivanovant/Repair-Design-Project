@@ -153,6 +153,7 @@
       padding: 0.04rem 1rem 0.58rem 0rem
 @media screen and ( max-width: 570px )
   .header 
+    background: $mobile-dark
     padding: 1.85rem 0
   .contacts
     &__phone
@@ -167,6 +168,7 @@
     line-height: 2.5rem
   .hero
     max-height: 44.3rem
+    background: $mobile-dark
     &::after
       display: none
     &__container
@@ -188,6 +190,7 @@
       margin-bottom: 2.17rem
       font-size: 1.08rem
   .section
+    background: $mobile-dark
     &__wrap
       margin-bottom: 0.5rem
     &__projects
@@ -244,7 +247,6 @@
     &__text
       max-width: 29rem
       width: 29rem
-
       margin-bottom: 2.5rem
       font-size: 1.167rem
       line-height: 2rem
@@ -263,6 +265,7 @@
         &:first-of-type
           margin-bottom: 5.2rem
     &__policy
+      padding-right: 0
       &-label
         justify-content: start
         margin-top: 0
@@ -292,6 +295,7 @@
       width: 28rem
       border-bottom: 1px solid rgba(54, 54, 54, 1)
   .types
+    background: $mobile-dark
     &__section
       &-title
         margin-bottom: 3.2rem
@@ -386,18 +390,56 @@
         line-height: 1.6rem
   .swiper-container-horizontal>.swiper-pagination-bullets
     bottom: 1.3rem
+  .footer
+    background: $mobile-dark
+    &__title
+      letter-spacing: -0.06rem
+      font-size: 1.75rem
+      margin-bottom: 4.55rem
+    &__wrap
+      max-width: 100%
+      padding: 0
+    &__form
+      max-width: 100%
+    &__input
+      padding: 0.2rem 0 0.7rem 0
+      &::placeholder
+        letter-spacing: 0.09rem
+      &-group
+        flex-basis: 100%
+        margin-bottom: 5.18rem
+        &--full-width
+          flex-basis: 100%
+          margin-bottom: 0.55rem
+    &__label
+      font-size: 1.2rem
+    &__button
+      margin: auto
+      font-size: 1.25rem
+      padding: 1.38rem 10.5rem
+    &__menu
+      background: $mobile-dark
+  .policy
+    margin-bottom: 5.8rem
+    &__label
+      &--center
+        justify-content: start
+        letter-spacing: 0.09rem
+        &::before
+          margin-right: 0.8rem
+
 @media screen and ( max-height: 600px )
   .hero
     &__scroll-down
       display: none
-@media screen and ( max-width: 360px )
+
+@media screen and ( max-width: 385px )
   body
     overflow-x: hidden
   .button
     min-width: 0
     &--primary
       padding: 1.5rem 5.85rem
-      margin-right: 0
     &--outline
       padding: 1.5rem 7.2rem
       margin-right: 0
