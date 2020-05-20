@@ -24,13 +24,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 $(document).ready(function () {
   const modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
-        closeBtn = $('.modal__close'),
         scrollUp = $('.scroll-up__item');
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
-  });
-  closeBtn.on('click', function () {
-    modal.toggleClass('modal--visible')
   });
   $(document).on('keydown', function (e) {
     if ((e.key === 'Escape') && (modal.hasClass('modal--visible')))
@@ -146,17 +142,88 @@ $(document).ready(function () {
   });
 
   new WOW().init();
+  const modalForm = $('.modal__form'),
+        controlForm = $('.control__form'),
+        footerForm = $('.footer__form');
 
-  $(".modal__form").validate({
+  modalForm.validate({
+    errorClass: "invalid",
+    errorElement: "div",
     rules: {
-      // simple rule, converted to {required:true}
-      userName: "required",
-      // compound rule
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
       userEmail: {
         required: true,
         email: true
       }
-    }
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    }  
   });
-  
+
+  controlForm.validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required"
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Заполните поле"
+    }  
+  });
+
+  footerForm.validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      userQuestion: {
+        required:true,
+        minlength: 10
+      }
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Заполните поле",
+      userQuestion: {
+        required: "Напишите ваш вопрос",
+        minlength: "В вопросе должно быть не менее 10 символов"
+      }
+    }  
+  });
+
+  $('[type=tel]').mask('+7 (000) 000 00-00', {placeholder: "+7 (___) ___-__-__"});
 });

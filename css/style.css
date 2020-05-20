@@ -370,10 +370,12 @@ template {
 .input {
   border: none;
   background-color: transparent;
-  font-size: 1.31rem; }
+  font-size: 1.31rem;
+  outline: none; }
   .input--light {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 0.35rem 0rem 0.58rem; }
+    padding: 0.35rem 0rem 0.58rem;
+    color: #ffffff; }
   .input--dark {
     border-bottom: 1px solid rgba(54, 54, 54, 0.3);
     padding: 0.04rem 4rem 0.45rem 0rem; }
@@ -427,6 +429,57 @@ template {
       height: 4rem;
       background-size: 2rem; }
 
+input.invalid {
+  border-bottom: 1px solid tomato; }
+
+#user-name-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+  color: tomato; }
+
+#user-phone-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+  color: tomato; }
+
+#user-email-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+  color: tomato; }
+
+#control-user-name-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+  color: tomato; }
+
+#control-user-phone-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+  color: tomato; }
+
+#footer-user-name-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+  color: tomato; }
+
+#footer-user-phone-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+  color: tomato; }
+
+#footer-user-question-error {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 0;
+  color: tomato; }
+
 .container {
   width: 90%;
   max-width: 1256px;
@@ -438,8 +491,10 @@ template {
   justify-content: space-between; }
 
 .col-30 {
-  max-width: 38.4%;
-  z-index: 5; }
+  max-width: 33%; }
+
+.col-38 {
+  max-width: 38.4%; }
 
 .col-45 {
   max-width: 44.5%; }
@@ -447,9 +502,8 @@ template {
 .col-55 {
   max-width: 55.5%; }
 
-.col-70 {
-  max-width: 61.6%;
-  z-index: 5; }
+.col-62 {
+  max-width: 61.6%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -812,6 +866,7 @@ img {
   color: #363636; }
 
 .control__input-group {
+  position: relative;
   display: flex;
   flex-direction: column; }
 
@@ -1085,6 +1140,7 @@ li {
   .footer__input {
     padding: 0.3rem 0 0.4rem 0; }
     .footer__input-group {
+      position: relative;
       display: flex;
       flex-direction: column;
       flex-basis: 44.7%;
@@ -1163,7 +1219,7 @@ li {
     display: flex;
     flex-direction: column; }
   .modal__input {
-    margin-bottom: 3.2rem;
+    margin-bottom: 0.7rem;
     color: #ffffff; }
     .modal__input::-webkit-input-placeholder {
       color: #ffffff; }
@@ -1175,6 +1231,11 @@ li {
       color: #ffffff; }
     .modal__input::placeholder {
       color: #ffffff; }
+    .modal__input-group {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.5rem; }
     .modal__input:last-of-type {
       margin-bottom: -0.1rem; }
   .modal__policy {
