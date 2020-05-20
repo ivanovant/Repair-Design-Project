@@ -383,7 +383,7 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
+  .policy__checkbox:checked ~ .policy__label::before {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
@@ -538,6 +538,10 @@ img {
       margin-bottom: 0.1rem; }
     .section-title--light {
       color: #ffffff; }
+    .section-title--center {
+      max-width: 36.0714rem;
+      margin: auto;
+      margin-bottom: 3.05rem; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -1120,7 +1124,7 @@ li {
     background-color: #181818;
     max-width: 63.07rem;
     margin: auto;
-    margin-bottom: 3.714rem;
+    margin-bottom: 2.4rem;
     padding: 2.5rem; }
   .footer__title {
     margin-bottom: 3.214rem;
@@ -1168,7 +1172,36 @@ li {
     font-size: 1.05rem; }
   .footer__menu {
     background-color: #131313;
-    padding: 4.2857rem 0; }
+    padding: 3.35rem 0; }
+  .footer__map {
+    margin: auto;
+    margin-bottom: 4.8rem;
+    width: 66.0714rem;
+    height: 33.2143rem; }
+
+.ymaps-2-1-76-map {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+.section-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .section-title__footer-heading {
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    letter-spacing: -0.045rem;
+    margin-bottom: 1.7rem; }
+  .section-title__link {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.1rem;
+    border-radius: 50%; }
+    .section-title__link-instagram {
+      background: #E3B873 url("../img/instagram-icon.svg") no-repeat center;
+      margin-left: 1rem; }
+    .section-title__link-mail {
+      background: #E3B873 url("../img/mail-icon.svg") no-repeat center; }
 
 .modal {
   opacity: 0;
