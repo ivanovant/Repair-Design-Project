@@ -83,7 +83,9 @@
       cursor: default
       &::before
         cursor: default
-
+  .footer
+    &__map
+      width: 57.0714rem
 @media screen and ( max-width: 798px )
   .row
     flex-direction: column
@@ -151,6 +153,9 @@
   .input
     &--dark
       padding: 0.04rem 1rem 0.58rem 0rem
+  .footer
+    &__map
+      width: 44.0714rem
 @media screen and ( max-width: 570px )
   .header 
     background: $mobile-dark
@@ -200,6 +205,16 @@
     &-title
       &--light
         margin-bottom: 3.4rem
+      &__link
+        width: 3.3rem
+        height: 3.3rem
+        &-instagram
+          background: $primary url('../img/instagram-icon.svg') no-repeat center
+          background-size: 1.725rem
+          margin-left: 1.7rem
+        &-mail
+          background: $primary url('../img/mail-icon.svg') no-repeat center
+          background-size: 1.725rem
       &__heading
         margin-bottom: 1rem
         &--primary
@@ -229,6 +244,11 @@
           margin-left: 1rem
           width: 2.66rem
           height: 0.18rem
+      &__footer-heading
+        font-size: 1.45rem
+        letter-spacing: 0.03rem
+        line-height: 2.1rem
+        margin-bottom: 1.8rem
     &__control
       padding: 4.28rem 0 3.88rem 0
     &__types
@@ -236,6 +256,47 @@
     &-types
       &__heading
         margin-bottom: 1.5rem
+    &__design
+      margin-bottom: 26.1rem
+    &__team
+      position: relative
+      margin-top: -35rem
+    &-team
+      &__heading
+        color: $light
+  .section-team__image
+    margin-bottom: 1.5rem
+  .section-title__text--center
+    max-width: 28.33rem
+    font-size: 1.27rem
+    line-height: 1.8rem
+    letter-spacing: -0.01rem
+  .team
+    &__section-title
+      margin-bottom: 6.6rem
+    &-card
+      &__text
+        margin: auto
+    &__card
+      margin-bottom: 6rem
+      &--first
+        &::before
+          width: 5.9rem
+          height: 5.9rem
+          left: -2.95rem
+          top: -2.95rem
+      &--second
+        &::before
+          width: 5.9rem
+          height: 5.9rem
+          left: -2.95rem
+          top: -2.95rem
+      &--third
+        &::before
+          width: 5.9rem
+          height: 5.9rem
+          left: -2.95rem
+          top: -2.95rem
   .control
     background-color: $mobile-dark
     color: $light
@@ -399,6 +460,7 @@
     &__wrap
       max-width: 100%
       padding: 0
+      margin-bottom: 4rem
     &__form
       max-width: 100%
     &__input
@@ -416,9 +478,18 @@
     &__button
       margin: auto
       font-size: 1.25rem
-      padding: 1.38rem 10.5rem
+      padding: 1.38rem 10.7rem
     &__menu
       background: $mobile-dark
+      display: none
+    &__map
+      width: 28.5rem
+      height: 21.3rem
+      margin-bottom: 2.2rem
+    &-contacts__wrap
+      display: flex
+      flex-direction: column-reverse
+      padding-bottom: 0.2rem
   .policy
     margin-bottom: 5.8rem
     &__label
@@ -427,13 +498,19 @@
         letter-spacing: 0.09rem
         &::before
           margin-right: 0.8rem
-
+  .team
+    &__text
+      display: none
+    &__card
+      width: 25rem
+      transform: translateX(1.56rem)
+  
 @media screen and ( max-height: 600px )
   .hero
     &__scroll-down
       display: none
 
-@media screen and ( max-width: 385px )
+@media screen and ( max-width: 370px )
   body
     overflow-x: hidden
   .button
@@ -457,3 +534,7 @@
     &-slide
       &__text
         min-width: 30%
+  .footer
+    &__map
+      width: 20rem
+      
