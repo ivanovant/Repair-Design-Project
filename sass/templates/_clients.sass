@@ -1,0 +1,102 @@
+.section
+  &-clients
+    &__heading
+      margin-bottom: 0.8rem
+    &__image
+      margin-bottom: 1.3rem
+    &__text
+      max-width: 25rem
+      margin-bottom: 2.7764rem
+.clients
+  &__row
+    max-width: 88.2857rem
+    margin-left: 0.7rem
+  &__card
+    position: relative
+    max-width: 26.8571rem
+    padding: 1.8rem 2.2rem 4rem 1.5rem
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04)
+    background: $light
+    z-index: 2
+  &__section-title
+    margin-bottom: 3.2rem
+  &-card
+    &__title
+      display: flex
+      justify-content: space-around
+      align-items: center
+      width: 100%
+      max-width: 30rem
+    &__text
+      margin-top: 0.9rem
+      font-size: 1.0714rem
+      line-height: 1.95rem
+      color: $secondary
+    &__tag
+      position: absolute
+      left: 0
+      bottom: -1.95rem
+      display: flex
+      justify-content: space-between
+      width: 100%
+      max-width: 21rem
+      min-height: 3.8571rem 
+      padding: 0 0.2rem 0 1.2rem
+      background-color: $primary
+      box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5)
+      color: $light
+      font-size: 1.23rem
+      line-height: 1.7143rem
+      font-family: Yeseva One
+      &::after
+        position: absolute
+        left: 9.6rem
+        content: ''
+        width: 1px
+        height: 100%
+        background-color: $light
+    &__space
+      display: flex
+      align-items: center
+      text-transform: uppercase
+    &__time
+      display: flex
+      align-items: center
+      width: 100%
+      max-width: 10rem
+.tag
+  margin-left: 1rem
+sup
+  font-size: 0.7rem
+.card
+  &-title
+    &__image
+      border-radius: 50%
+    &__heading
+      font-family: Yeseva One
+      font-size: 1.32rem
+      line-height: 1.6429rem
+      margin: 0
+      margin-left: 1.5rem
+      letter-spacing: -0.02rem
+.background
+  &::after
+    position: absolute
+    bottom: -10.5rem
+    left: 0rem 
+    z-index: 1
+    content: ''
+    width: 50%
+    height: 50rem
+    background: url(../img/clients-bg-left.svg) no-repeat left
+    opacity: 0.05
+  &::before
+    position: absolute
+    bottom: -10.5rem
+    right: 0rem
+    z-index: 1
+    content: ''
+    width: 50%
+    height: 50rem
+    background: url(../img/clients-bg-right.svg) no-repeat right
+    opacity: 0.05

@@ -2,6 +2,7 @@
   &__section-title
     margin-bottom: 2.214rem
     margin-top: -27.5rem
+
   &__video
     position: relative
     display: flex
@@ -11,6 +12,7 @@
     min-height: 31rem
     background: $dark url('../img/video-mask.jpg') no-repeat center
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
+    z-index: 10
     &::before
       content: ''
       position: absolute
@@ -24,6 +26,8 @@
     text-align: center
     font-size: 1.428rem
     line-height: 2.45rem
+    position: relative
+    z-index: 50
     &::before
       content: ''
       display: block
@@ -39,6 +43,8 @@
     justify-content: space-between
     max-width: 55rem
     margin: auto
+    position: relative
+    z-index: 50
   &__input
     &::placeholder
       color: #363636
@@ -61,4 +67,38 @@
     position: relative
     margin: auto
 
+.background
+  &__image
+    &::after
+      position: absolute
+      bottom: 35.6rem
+      left: 0rem 
+      z-index: 1
+      content: ''
+      width: 50%
+      height: 50rem
+      background: url(../img/control-bg-left.svg) no-repeat left
+      opacity: 0.05
+    &::before
+      position: absolute
+      bottom: 35.6rem
+      right: 0rem
+      z-index: 1
+      content: ''
+      width: 50%
+  
+      height: 50rem
+      background: url(../img/control-bg-right.svg) no-repeat right
+      opacity: 0.05
+  &__lines
+    &::after
+      position: absolute
+      top: -4rem
+      left: 0
+      z-index: 2
+      content: ''
+      width: 100%
+      height: 190.2143rem
+      background: url(../img/light-bg-lines.svg) no-repeat center
+      opacity: 0.2
 
