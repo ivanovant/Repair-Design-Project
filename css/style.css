@@ -1601,11 +1601,15 @@ sup {
     margin-right: 0.1rem;
     border-radius: 0; }
 
-@media screen and (max-width: 1215px) {
+@media screen and (max-width: 1270px) {
   html {
     font-size: 12px; }
   .nav__link {
     margin-right: 1rem; } }
+
+@media screen and (max-width: 1080px) {
+  .clients__card {
+    min-height: 37rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -1685,7 +1689,9 @@ sup {
     .footer__map {
       width: 57.0714rem; }
   .card__box-img::after {
-    min-height: 100%; } }
+    min-height: 100%; }
+  .clients__card {
+    min-height: 43rem; } }
 
 @media screen and (max-width: 798px) {
   .row {
@@ -1715,6 +1721,8 @@ sup {
     background-color: #131313;
     padding-top: 0.1rem;
     padding-bottom: 5rem; }
+  .section__clients {
+    display: none; }
   .design__heading {
     margin-bottom: 1rem; }
   .design__card {
@@ -2089,7 +2097,8 @@ sup {
     .footer__wrap {
       max-width: 100%;
       padding: 0;
-      margin-bottom: 4rem; }
+      margin-bottom: 4rem;
+      margin-top: 0; }
     .footer__form {
       max-width: 100%;
       padding-left: 0.1rem; }

@@ -1,9 +1,14 @@
-@media screen and ( max-width: 1215px )
+@media screen and ( max-width: 1270px )
   html 
     font-size: 12px
   .nav
     &__link
       margin-right: 1rem
+
+@media screen and ( max-width: 1080px )
+  .clients
+    &__card
+      min-height: 37rem
 @media screen and ( max-width: 992px )
   .nav
     display: none
@@ -103,6 +108,9 @@
     &__form
   .card__box-img::after
     min-height: 100%
+  .clients
+    &__card
+      min-height: 43rem
 @media screen and ( max-width: 798px )
   .row
     flex-direction: column
@@ -133,6 +141,8 @@
       background-color: $dark
       padding-top: 0.1rem
       padding-bottom: 5rem
+    &__clients
+      display: none
   .design
     &__heading
       margin-bottom: 1rem
@@ -527,6 +537,7 @@
       max-width: 100%
       padding: 0
       margin-bottom: 4rem
+      margin-top: 0
     &__form
       max-width: 100%
       padding-left: 0.1rem
