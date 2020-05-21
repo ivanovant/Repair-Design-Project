@@ -1109,9 +1109,11 @@ li {
   margin-bottom: 6.2rem; }
 
 .section__slide-heading {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 15; }
   .section__slide-heading-box {
     display: flex;
     flex-direction: column;
