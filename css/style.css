@@ -1235,6 +1235,9 @@ li {
     background-color: #E3B873;
     border-radius: 30px; }
 
+.section-team__heading {
+  color: #ffffff; }
+
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem; }
