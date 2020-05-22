@@ -316,6 +316,7 @@ $(document).ready(function () {
   VK.Widgets.Group("vk__modal", {
     width: 320,
     color1: "181818",
+    color3: 'E3B873',
     mode: 3
     },
   123083697);
