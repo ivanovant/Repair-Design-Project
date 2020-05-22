@@ -23,8 +23,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 */
 $(document).ready(function () {
   const modal = $('.modal'),
+        success = $('.success'),
         modalBtn = $('[data-toggle=modal]'),
-        scrollUp = $('.scroll-up__item');
+        scrollUp = $('.scroll-up__item'),
+        successBtn = $('[data-toggle=success]');
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
@@ -35,6 +37,17 @@ $(document).ready(function () {
   $(document).on('click', function (e) {
     if (modal.is(e.target))
       modal.toggleClass('modal--visible');
+  });
+  successBtn.on('click', function () {
+    success.toggleClass('success--visible');
+  });
+  $(document).on('keydown', function (e) {
+    if ((e.key === 'Escape') && (success.hasClass('success--visible')))
+       success.toggleClass('success--visible')
+  });
+  $(document).on('click', function (e) {
+    if (success.is(e.target))
+      success.toggleClass('success--visible');
   });
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
@@ -146,6 +159,13 @@ $(document).ready(function () {
         controlForm = $('.control__form'),
         footerForm = $('.footer__form');
 
+  $('.modal__form').submit(function(){
+  
+    alert('Нажата submit-кнопка');
+    
+    return false;
+  });
+
   modalForm.validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -174,7 +194,8 @@ $(document).ready(function () {
         email: "Введите корректный email"
       },
       policyCheckbox: "Заполните поле"
-    }  
+    },
+
   });
 
   controlForm.validate({

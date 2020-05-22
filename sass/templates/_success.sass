@@ -1,0 +1,62 @@
+.success
+  &__modal
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    z-index: 199
+    display: flex
+    align-items: center
+    justify-content: center
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($dark, 0.6)
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    max-width: 29.143rem
+    min-height: 22rem
+    background: #181818 url('../img/bg-lines.svg') no-repeat center
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05)
+    padding: 6rem 3.4rem 4rem
+  &__close
+    position: absolute
+    right: 0
+    top: 0
+    width: 2.1rem
+    height: 2.1rem
+    background: transparent url('../img/close.svg') no-repeat center
+    border: none
+    margin: 0.7rem 0.857rem
+    cursor: pointer
+    outline: none
+    &:hover
+      background: transparent url('../img/close-hover.svg') no-repeat center
+  &__heading
+    text-transform: uppercase
+    font-family: Yeseva One, cursive
+    font-size: 1.357rem
+    color: $light
+    line-height: 1.95rem
+    text-align: center
+    margin: 0
+    margin-bottom: 1.5rem
+  &__text
+    margin-bottom: 5rem
+    // max-width: 20rem
+    font-family: Futura Book
+    color: $light
+    font-size: 1.3rem
+  &__button
+    align-self: flex-end
+    border-radius: 0
+    padding: 1.35rem 3.2rem
