@@ -80,6 +80,7 @@
   justify-content: center
   align-items: center
   background-color: $dark
+
   &__link
     display: flex
     align-items: center
@@ -90,17 +91,20 @@
     transform: rotate(90deg)
     line-height: 0.8
     font-family: 'Futura Demi'
-    &:hover 
-      color: $light 
+    position: relative
+    z-index: 50
+    &:hover
+      color: $light
     &::after
       content: ''
       width: 3.57rem
       height: 0.07rem
       background-color: $primary
       margin-left: 1rem
+      &:hover
+        color: $light
 .title
   font-family: 'Yeseva One'
   text-transform: uppercase
   font-size: 2.86rem
-  &--primary  
-    color: $primary
+
