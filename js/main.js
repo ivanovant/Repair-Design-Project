@@ -159,13 +159,6 @@ $(document).ready(function () {
         controlForm = $('.control__form'),
         footerForm = $('.footer__form');
 
-  $('.modal__form').submit(function(){
-  
-    alert('Нажата submit-кнопка');
-    
-    return false;
-  });
-
   modalForm.validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -195,7 +188,19 @@ $(document).ready(function () {
       },
       policyCheckbox: "Заполните поле"
     },
-
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          success.toggleClass('success--visible');
+        }
+      });
+    }
+  
   });
 
   controlForm.validate({
@@ -218,7 +223,18 @@ $(document).ready(function () {
       },
       userPhone: "Заполните поле",
       controlPolicyCheckbox: "Заполните поле"
-    }  
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          success.toggleClass('success--visible');
+        }
+      });
+    }
   });
 
   footerForm.validate({
@@ -249,7 +265,18 @@ $(document).ready(function () {
         minlength: "В вопросе должно быть не менее 10 символов"
       },
       footerPolicyCheckbox: "Заполните поле"
-    }  
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          success.toggleClass('success--visible');
+        }
+      });
+    }
   });
 
   $('[type=tel]').mask('+7 (000) 000 00-00', {placeholder: "+7 (___) ___-__-__"});
@@ -286,4 +313,10 @@ $(document).ready(function () {
     myMap.geoObjects
         .add(myPlacemark)
   });
+  VK.Widgets.Group("vk__modal", {
+    width: 320,
+    color1: "181818",
+    mode: 3
+    },
+  123083697);
 });
