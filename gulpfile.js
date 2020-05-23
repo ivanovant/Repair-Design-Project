@@ -4,6 +4,7 @@ const browserSync = require('browser-sync').create();
 // const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const minImg = require('gulp-tinypng-compress');
 
 
 // Static server
@@ -32,6 +33,18 @@ function bs() {
 //     .pipe(browserSync.stream());
 // };
 
+// Compressing jpg&png images
+function tinypng() {
+  return src("./img/clients/*.jpg")
+    .pipe(minImg({
+      key: 'yY89MnhWVL6TNTN5l7b4lQPtcxzw3f17',
+      sigFile: 'images/.tinypng-sigs',
+      log: true
+    }))
+    .pipe(dest("./img/minimg"));
+};
+
+
 // compilate sass files
 function serveSass() {
   return src("./sass/**/*.sass", "./sass/**/*.scss")
@@ -47,3 +60,4 @@ function serveSass() {
 
 
 exports.serve = bs;
+exports.minimg = tinypng;

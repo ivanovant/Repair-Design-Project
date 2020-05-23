@@ -101,11 +101,13 @@ $(document).ready(function () {
   const counter = $('.swiper-slide-counter')
   next2.css('left', prev2.width() + 20 + bullets2.width() + 20)
   bullets2.css('left', prev2.width() + 20);
-
+  
   let totalSlides = slide.length;
   let currentSlide = active.index() + 1;
   let down_index;
+
   counter.html('' + currentSlide + '/' + totalSlides + '');
+
   next2.on('click', () => {
     let currentSlide_active = $('.steps-slide.swiper-slide-active').index() + 1;
     if (currentSlide_active <= totalSlides) {
@@ -133,13 +135,11 @@ $(document).ready(function () {
      })
     };
   });
-
   $('.section__slide-heading-box').each(function(e) {
     if (e === 0) {
       $(this).addClass('box--active');
     }
   });
-
   $('.section__slide-heading-box').on('click', (e) => {
     const id = e.target.id - 1
     swiper2[0].slideTo(id)
@@ -158,10 +158,6 @@ $(document).ready(function () {
   const modalForm = $('.modal__form'),
         controlForm = $('.control__form'),
         footerForm = $('.footer__form');
-
-  // let validateSettings = {
-
-  // };
 
   modalForm.validate({
     errorClass: "invalid",
@@ -204,7 +200,6 @@ $(document).ready(function () {
         }
       });
     }
-  
   });
 
   controlForm.validate({
@@ -285,51 +280,43 @@ $(document).ready(function () {
 
   $('[type=tel]').mask('+7 (000) 000 00-00', {placeholder: "+7 (___) ___-__-__"});
 
+  let marker = true;
+
+  function count() {
+    ymaps.ready(function () {
+      let myMap = new ymaps.Map('map', {
+        center: [47.208901, 39.631539],
+        zoom: 15
+    }, {
+        searchControlProvider: 'yandex#search'
+    }),
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Наш офис',
+        balloonContent: 'Вход со двора'
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: '../img/minimg/location.png',
+        iconImageSize: [32, 32],
+        iconImageOffset: [-5, -38]
+    })
+    myMap.geoObjects
+      .add(myPlacemark)
+    });
+    marker = false;
+};
   $(window).on('scroll', () => {
     if ($(this).scrollTop() > 6000) {
-      ymaps.ready(function () {
-        var myMap = new ymaps.Map('map', {
-          center: [47.208901, 39.631539],
-          zoom: 15
-      }, {
-          searchControlProvider: 'yandex#search'
-      }),
-
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
-
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Наш офис',
-          balloonContent: 'Вход со двора'
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'img/location.png',
-          // Размеры метки.
-          iconImageSize: [32, 32],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-      })
-
-  myMap.geoObjects
-      .add(myPlacemark)
-      });
+      if ( marker ) {
+        count();
     }
-  });
-  // ymaps.ready(function () {
-    
-  // });
-
-  VK.Widgets.Group("vk__modal", {
+  };
+});
+  VK.Widgets.Subscribe("vk__modal", {
     width: 320,
-    color1: "181818",
-    color3: 'E3B873',
-    mode: 3
+    soft: 1,
     },
-  123083697);
+  -123083697);
 });

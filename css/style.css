@@ -353,7 +353,7 @@ template {
       border-color: #E3B873; }
 
 .contacts__button {
-  padding: 0.93rem 1.43rem; }
+  padding: 0.83rem 1.43rem; }
 
 .hero__button {
   padding: 1.28rem 1.86rem;
@@ -404,12 +404,11 @@ template {
 
 .scroll-up {
   position: fixed;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   right: 8rem;
-  left: 0;
   bottom: 5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   z-index: 299; }
   .scroll-up__item {
     display: none;
@@ -559,15 +558,6 @@ img {
   .section__steps {
     padding-top: 30.3rem;
     padding-bottom: 35.8rem; }
-    .section__steps::before {
-      position: absolute;
-      top: 0;
-      z-index: 1;
-      content: '';
-      width: 100%;
-      height: 110rem;
-      background: url(../img/clients-bg-lines.svg) no-repeat center;
-      opacity: 0.3; }
   .section__design {
     margin-bottom: -25.6rem; }
   .section__team {
@@ -588,7 +578,9 @@ img {
       opacity: 0.3; }
   .section-title {
     text-align: center;
-    font-weight: normal; }
+    font-weight: normal;
+    position: relative;
+    z-index: 150; }
     .section-title--left {
       text-align: left;
       margin-bottom: 0.1rem; }
@@ -669,7 +661,8 @@ img {
       opacity: 0.3; }
   .section--dark {
     background-color: #131313;
-    color: #ffffff; }
+    color: #ffffff;
+    z-index: 1; }
 
 .header {
   position: fixed;
@@ -720,7 +713,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background: #131313 url(../img/hero-bg.jpg) no-repeat center/cover;
+  background: #131313 url(../img/minimg/hero-bg.jpg) no-repeat center/cover;
   padding-top: 7.14rem;
   height: 100vh;
   color: #ffffff; }
@@ -866,7 +859,8 @@ img {
 .swiper-button-prev, .swiper-button-next {
   width: 42px;
   bottom: 0;
-  top: auto; }
+  top: auto;
+  z-index: 150; }
   .swiper-button-prev::after, .swiper-button-next::after {
     display: none; }
 
@@ -895,7 +889,7 @@ img {
   margin-bottom: 4.428rem;
   max-width: 58.357rem;
   min-height: 31rem;
-  background: #131313 url("../img/video-mask.jpg") no-repeat center;
+  background: #131313 url("../img/minimg/video-mask.jpg") no-repeat center;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
   z-index: 10; }
   .control__video::before {
@@ -971,23 +965,23 @@ img {
 
 .background__image::after {
   position: absolute;
-  bottom: 35.6rem;
+  bottom: 49.5rem;
   left: 0rem;
   z-index: 1;
   content: '';
-  width: 50%;
-  height: 50rem;
+  width: 25%;
+  height: 20rem;
   background: url(../img/control-bg-left.svg) no-repeat left;
   opacity: 0.05; }
 
 .background__image::before {
   position: absolute;
-  bottom: 35.6rem;
+  bottom: 49.5rem;
   right: 0rem;
   z-index: 1;
   content: '';
-  width: 50%;
-  height: 50rem;
+  width: 25%;
+  height: 20rem;
   background: url(../img/control-bg-right.svg) no-repeat right;
   opacity: 0.05; }
 
@@ -1303,7 +1297,9 @@ li {
   margin: auto;
   text-align: center;
   font-size: 1.428rem;
-  line-height: 2.45rem; }
+  line-height: 2.45rem;
+  position: relative;
+  z-index: 150; }
   .team__text::before {
     content: '';
     display: block;
@@ -1634,7 +1630,7 @@ sup {
   min-height: 22rem;
   background: #181818 url("../img/bg-lines.svg") no-repeat center;
   box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
-  padding: 2rem 3.2rem 2rem; }
+  padding: 4rem 3.2rem 4rem; }
 
 .success__close {
   position: absolute;
@@ -1678,7 +1674,7 @@ sup {
   flex-direction: column;
   width: 100%;
   max-width: 29.143rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 4rem; }
 
 .success .vk__heading {
   font-family: Futura Book;
@@ -1688,7 +1684,7 @@ sup {
   line-height: 1.95rem;
   text-align: center;
   margin: 0;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1rem; }
 
 @media screen and (max-width: 1270px) {
   html {
@@ -2019,7 +2015,7 @@ sup {
       max-width: 28rem;
       min-height: 17.2rem;
       margin-bottom: 2.4rem;
-      background: #131313 url("../img/video-mask-mobile.jpg") no-repeat center; }
+      background: #131313 url("../img/minimg/video-mask-mobile.jpg") no-repeat center; }
     .control__text {
       max-width: 29rem;
       width: 29rem;
