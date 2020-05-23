@@ -1,12 +1,15 @@
 const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
-// const rename = require('gulp-rename');
+const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const minImg = require('gulp-tinypng-compress');
 const webp = require('gulp-webp');
 const concatCSS = require('gulp-concat-css');
+const html = require('gulp-htmlmin');
+const babel = require('gulp-babel');
+const js = require('gulp-uglify');
 
 // Static server
 function bs() {
@@ -57,11 +60,42 @@ function tinypng() {
   function mincss() {
     return src("./css/*.css")
       .pipe(cleanCSS())
-      .pipe(concatCSS("main.css"))
+      .pipe(rename({ suffix: '.min'}))
       .pipe(dest("./css/min"))
   };
   
+  function conCSS() {
+    return src("./css/min/*.css")
+      .pipe(concatCSS("main.css"))
+      .pipe(dest("./css"))
+    };
+
+  function minhtml() {
+    return src("./index.html")
+    .pipe(html({ collapseWhitespace: true }))
+    .pipe(dest("minhtml"))
+  };
+
+  function babeljs() {
+    return src("js/main.js")
+      .pipe(babel({
+        presets: ['@babel/env']
+    }))
+      .pipe(dest('js/min'))
+    };
+
+    function minjs() {
+    return src("js/min/main.js")
+      .pipe(js())
+      .pipe(rename({ suffix: '.min'}))
+      .pipe(dest('js/min'))
+    };
+
   exports.serve = bs;
   exports.minimg = tinypng;
   exports.webp = imgToWebp;
-  exports.css = mincss;
+  exports.mincss = mincss;
+  exports.concss = conCSS;
+  exports.html = minhtml;
+  exports.bjs = babeljs;
+  exports.js = minjs;

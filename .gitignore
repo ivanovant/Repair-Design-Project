@@ -46,7 +46,9 @@ build/Release
 node_modules/
 jspm_packages/
 phpmailer/
-
+css/min/
+js/min
+minhtml/
 # PHP files
 *.php
 

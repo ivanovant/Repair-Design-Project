@@ -1183,6 +1183,19 @@ li {
       max-width: 7.6rem;
       padding-left: 0.7rem; }
 
+.section__slide-num {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.0714rem;
+  font-family: Yeseva One, cursive;
+  margin-bottom: 0.8rem; }
+  .section__slide-num::after {
+    content: '';
+    width: 1.3rem;
+    height: 1px;
+    background-color: #E3B873;
+    margin-top: 0.1rem; }
+
 .section__slide-title {
   max-width: 9.57rem;
   letter-spacing: 0.03rem;
