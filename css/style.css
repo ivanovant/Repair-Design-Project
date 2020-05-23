@@ -557,7 +557,8 @@ img {
     padding: 4.9rem 0; }
   .section__steps {
     padding-top: 30.3rem;
-    padding-bottom: 35.8rem; }
+    padding-bottom: 35.8rem;
+    background: #131313 url(../img/bg-line.svg) no-repeat center; }
   .section__design {
     margin-bottom: -25.6rem; }
   .section__team {
@@ -569,12 +570,11 @@ img {
     .section__clients::before {
       position: absolute;
       top: -35rem;
-      left: 0.5rem;
       z-index: 1;
       content: '';
       width: 100%;
       height: 110rem;
-      background: url(../img/clients-bg-lines.svg) no-repeat left;
+      background: url(../img/clients-bg-lines.svg) no-repeat center;
       opacity: 0.3; }
   .section-title {
     text-align: center;
@@ -646,19 +646,7 @@ img {
         color: #ffffff;
         max-width: 32rem; }
   .section__design {
-    position: relative; }
-    .section__design::after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      right: 0;
-      top: 39.1rem;
-      bottom: 0;
-      width: 100%;
-      height: 115.36rem;
-      background: url(../img/design/design-bg-lines.svg) no-repeat center;
-      opacity: 0.3; }
+    position: relatives; }
   .section--dark {
     background-color: #131313;
     color: #ffffff;
@@ -713,7 +701,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background: #131313 url(../img/minimg/hero-bg.jpg) no-repeat center/cover;
+  background: #131313 url(../img/webp/minimg/hero-bg.webp) no-repeat center/cover;
   padding-top: 7.14rem;
   height: 100vh;
   color: #ffffff; }
@@ -889,7 +877,7 @@ img {
   margin-bottom: 4.428rem;
   max-width: 58.357rem;
   min-height: 31rem;
-  background: #131313 url("../img/minimg/video-mask.jpg") no-repeat center;
+  background: #131313 url("../img/webp/minimg/video-mask.webp") no-repeat center;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
   z-index: 10; }
   .control__video::before {
@@ -1195,18 +1183,6 @@ li {
       max-width: 7.6rem;
       padding-left: 0.7rem; }
 
-.section__slide-num {
-  font-family: Yeseva One;
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.8rem; }
-  .section__slide-num::after {
-    content: '';
-    width: 1.4rem;
-    height: 0.12rem;
-    background-color: #E3B873; }
-
 .section__slide-title {
   max-width: 9.57rem;
   letter-spacing: 0.03rem;
@@ -1432,7 +1408,7 @@ sup {
   opacity: 0.05; }
 
 .footer {
-  background: #131313 url("../img/minimg/footer-bg.jpg") no-repeat center/cover;
+  background: #131313 url("../img/webp/minimg/footer-bg.webp") no-repeat center/cover;
   padding-top: 3rem;
   position: relative;
   z-index: 100; }
@@ -1508,7 +1484,7 @@ sup {
 
 .ymap-container {
   position: relative;
-  background: #ffffff url("../img/map-load-bg.jpg") no-repeat center/cover;
+  background: #ffffff url("../img/webp/map-load-bg.webp") no-repeat center/cover;
   max-width: 925px;
   max-height: 465px;
   margin: auto;
@@ -1721,7 +1697,7 @@ sup {
   margin-bottom: 1rem; }
 
 .success__text {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-family: Futura Book;
   color: #ffffff;
   font-size: 1.3rem; }
@@ -1735,7 +1711,6 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
   max-width: 29.143rem;
   margin-bottom: 4rem; }
@@ -1748,7 +1723,27 @@ sup {
   line-height: 1.95rem;
   text-align: center;
   margin: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 3rem; }
+
+.success .vk__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #5181B8;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 0 0;
+  font-size: 1rem; }
+  .success .vk__link::before {
+    content: '';
+    display: inline-block;
+    background: url("../img/vk.svg");
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem; }
+
+.success .vk__image {
+  width: 32px; }
 
 @media screen and (max-width: 1270px) {
   html {
@@ -2079,7 +2074,7 @@ sup {
       max-width: 28rem;
       min-height: 17.2rem;
       margin-bottom: 2.4rem;
-      background: #131313 url("../img/minimg/video-mask-mobile.jpg") no-repeat center; }
+      background: #131313 url("../img/webp/minimg/video-mask-mobile.webp") no-repeat center; }
     .control__text {
       max-width: 29rem;
       width: 29rem;
