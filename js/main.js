@@ -63,7 +63,7 @@ $(document).ready(function () {
       return false;
   });
 
-  var swiper1 = new Swiper ('.swiper1', {
+  const swiper1 = new Swiper ('.swiper1', {
     loop: true,
     pagination: {
       el: '.swiper-pagination1',
@@ -82,7 +82,7 @@ $(document).ready(function () {
   next.css('left', prev.width() + 20 + bullets.width() + 20)
   bullets.css('left', prev.width() + 20)
 
-  var swiper2 = new Swiper ('.swiper2', {
+  const swiper2 = new Swiper ('.swiper2', {
     pagination: {
       el: '.swiper-pagination2',
       type: 'bullets',
@@ -101,7 +101,7 @@ $(document).ready(function () {
   const counter = $('.swiper-slide-counter')
   next2.css('left', prev2.width() + 20 + bullets2.width() + 20)
   bullets2.css('left', prev2.width() + 20);
-  
+
   let totalSlides = slide.length;
   let currentSlide = active.index() + 1;
   let down_index;
@@ -280,11 +280,21 @@ $(document).ready(function () {
 
   $('[type=tel]').mask('+7 (000) 000 00-00', {placeholder: "+7 (___) ___-__-__"});
 
-  let marker = true;
 
-  function count() {
-    ymaps.ready(function () {
-      let myMap = new ymaps.Map('map', {
+  VK.Widgets.Subscribe("vk__modal", {
+    width: 320,
+    soft: 1,
+    },
+  -123083697);
+
+  //Переменная для включения/отключения индикатора загрузки
+  let spinner = $('.ymap-container').children('.loader');
+  //Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
+  let check_if_load = false;
+  
+  //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
+  function init () {
+    let myMap = new ymaps.Map('map-yandex', {
         center: [47.208901, 39.631539],
         zoom: 15
     }, {
@@ -298,25 +308,98 @@ $(document).ready(function () {
         balloonContent: 'Вход со двора'
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/minimg/location.png',
+        iconImageHref: '../img/minimg/img/location.png',
         iconImageSize: [32, 32],
-        iconImageOffset: [-5, -38]
-    })
-    myMap.geoObjects
-      .add(myPlacemark)
+        iconImageOffset: [-5, -38],
     });
-    marker = false;
-};
-  $(window).on('scroll', () => {
-    if ($(this).scrollTop() > 6000) {
-      if ( marker ) {
-        count();
+  
+    myMap.geoObjects.add(myPlacemark);
+    // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
+    let layer = myMapTemp.layers.get(0).get(0);
+  
+    // Решение по callback-у для определения полной загрузки карты
+    waitForTilesLoad(layer).then(function() {
+      // Скрываем индикатор загрузки после полной загрузки карты
+      spinner.removeClass('is-active');
+    });
+  }
+  
+  // Функция для определения полной загрузки карты (на самом деле проверяется загрузка тайлов) 
+  function waitForTilesLoad(layer) {
+    return new ymaps.vow.Promise(function (resolve, reject) {
+      let tc = getTileContainer(layer), readyAll = true;
+      tc.tiles.each(function (tile, number) {
+        if (!tile.isReady()) {
+          readyAll = false;
+        }
+      });
+      if (readyAll) {
+        resolve();
+      } else {
+        tc.events.once("ready", function() {
+          resolve();
+        });
+      }
+    });
+  }
+  
+  function getTileContainer(layer) {
+    for (let k in layer) {
+      if (layer.hasOwnProperty(k)) {
+        if (
+          layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
+          || layer[k] instanceof ymaps.layer.tileContainer.DomContainer
+        ) {
+          return layer[k];
+        }
+      }
     }
-  };
-});
-  VK.Widgets.Subscribe("vk__modal", {
-    width: 320,
-    soft: 1,
-    },
-  -123083697);
+    return null;
+  }
+  
+  // Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
+  function loadScript(url, callback) {
+    let script = document.createElement("script");
+  
+    if (script.readyState){  // IE
+      script.onreadystatechange = function() {
+        if (script.readyState == "loaded" ||
+                script.readyState == "complete") {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {  // Другие браузеры
+      script.onload = function() {
+        callback();
+      };
+    }
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+  
+  // Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
+  let ymap = function() {
+    $('.ymap-container').mouseenter(function() {
+        if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
+  
+        // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
+          check_if_load = true; 
+  
+      // Показываем индикатор загрузки до тех пор, пока карта не загрузится
+          spinner.addClass('is-active');
+  
+      // Загружаем API Яндекс.Карт
+          loadScript("https://api-maps.yandex.ru/2.1/?apikey=a00f0ba8-875e-472d-9d6e-105c41b610b1&lang=ru_RU", function() {
+            // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
+            ymaps.load(init);
+          });                
+        }
+      }
+    );  
+  }
+  
+  $(function() {
+    ymap();
+  });
 });

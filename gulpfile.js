@@ -35,7 +35,7 @@ function bs() {
 
 // Compressing jpg&png images
 function tinypng() {
-  return src("./img/clients/*.jpg")
+  return src("./img/map-load-bg.jpg")
     .pipe(minImg({
       key: 'yY89MnhWVL6TNTN5l7b4lQPtcxzw3f17',
       sigFile: 'images/.tinypng-sigs',
