@@ -1,0 +1,90 @@
+.style
+  position: relative
+  background: $dark url(../img/style/style-bg.jpg) no-repeat center / 100%
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($dark, 0.7)
+  &__heading
+    font-size: 1.9286rem
+    letter-spacing: -0.001rem
+    margin-bottom: 3rem
+  &__section
+    &-title
+      max-width: 29.3571rem
+      padding-top: 8.75rem
+.section
+  &__style
+    padding: 0 0 5.6rem 1.1rem
+    padding-left: 1.1rem
+    max-height: 61.7143rem
+    &-list
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &-item
+      position: relative
+      display: flex
+      flex-direction: column
+      font-size: 1.7rem
+      letter-spacing: 0.025rem
+      margin-bottom: 1.585rem
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        border-bottom: 1px solid $primary
+        width: 10.4rem
+    &-image
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        // background-color: $scale
+      &-wrap
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        z-index: 50
+#first
+  position: absolute
+  top: -2.9286rem
+  left: 0
+  width: 25.2857rem
+  height: 39.8486rem
+  background: url('../img/style/image-1.jpg') no-repeat center
+#second
+  position: absolute
+  top: 39.7021rem
+  left: 0
+  width: 25.2857rem
+  height: 24.9286rem
+  background: url('../img/style/image-2.jpg') no-repeat center
+#third
+  position: absolute
+  top: -8.0379rem
+  width: 25.2857rem
+  height: 19.6429rem
+  background: url('../img/style/image-3.jpg') no-repeat center
+#fourth
+  position: absolute
+  top: 14.2479rem
+  width: 25.2857rem
+  height: 44.6343rem
+  background: url('../img/style/image-4.jpg') no-repeat center
+#wrap
+  margin-right: 3.4rem
+
+
+
+

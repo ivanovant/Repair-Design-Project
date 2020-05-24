@@ -1,0 +1,120 @@
+.process
+  &__wrap
+    position: relative
+    z-index: 150
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    position: relative
+    justify-content: flex-start
+    width: 100%
+    max-width: 100%
+    min-height: 50rem
+    padding-top: 5.4rem
+    padding-right: 0.6rem
+  &__dialog
+    width: 100%
+    max-width: 36.143rem
+    margin-bottom: 2.6rem
+    background: #181818 url('../img/bg-lines.svg') no-repeat center
+    background-size: auto 100%
+    padding: 1.7rem 3.5rem 1.928rem
+    color: $light
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05)
+  &__form
+    display: flex
+    flex-direction: column
+    &::nth-child(3)
+      margin-bottom: 0
+  &__input
+    margin-bottom: 0.8rem
+    &::placeholder  
+      color: $light
+    &-group
+      position: relative
+      display: flex
+      flex-direction: column
+      margin-bottom: 2.5rem
+      &:nth-child(3)    
+        margin-bottom: -1rem
+  &__title
+    margin: 0 auto
+    margin-bottom: 2.5rem
+    max-width: 23rem
+    font-size: 1.4286rem
+    line-height: 1.9rem
+    letter-spacing: 0.048rem
+    text-align: center
+  &__policy
+    margin-bottom: 2.85rem 
+    position: relative
+  &__button
+    align-self: flex-end
+    padding: 1.34rem 2.65rem
+    border-radius: 0
+  &__economy
+    margin-right: 4.8em
+  &__moneybox
+    display: flex
+    align-items: center
+    font-family: Futura Demi
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15)
+    color: $primary
+    font-size: 1.4286rem
+    line-height: 1.7857rem
+    max-width: 29rem
+    &::before
+      content: ''
+      min-width: 5.1429rem
+      min-height: 5.1429rem
+      background: $primary url('../img/moneybox.svg') no-repeat center
+      border-radius: 50%
+      margin-right: 1.8rem
+  &__step
+    position: relative
+    z-index: 150
+    display: flex
+    align-items: center
+    margin-top: 0.56rem
+    font-family: Futura Medium
+    font-size: 1.2857rem
+    line-height: 1.5rem
+    max-width: 29rem
+    &::before
+      content: ''
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 1.2rem
+      min-width: 2.9829rem
+      min-height: 2.9829rem
+      background: $primary
+      font-family: Yeseva One, cursive
+      font-size: 1.29rem
+      border-radius: 50%
+      color: $light
+    &--first
+      margin-bottom: 4rem
+      margin-right: 0.82rem
+      &::before
+        margin-top: 0.2rem
+        content: '01'
+    &--second
+      margin-right: 10.5rem
+      margin-bottom: 8rem
+      &::before
+        margin-top: 0.45rem
+        content: '02'
+    &--third
+      margin-right: 5.2rem
+      margin-bottom: 7.85rem
+      &::before
+        margin-right: 0.98rem
+        content: '03'
+    &--fourth
+      margin-right: 3.3rem
+      max-width: 24rem
+      &::before
+        margin-right: 0.92rem
+        content: '04'
+    
