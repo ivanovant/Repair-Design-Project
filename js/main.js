@@ -140,18 +140,21 @@ $(document).ready(function () {
       $(this).addClass('box--active');
     }
   });
-  $('.section__slide-heading-box').on('click', (e) => {
-    const id = e.target.id - 1
+
+  const box = $('.section__slide-heading-box');
+
+  box.on('click', (e) => {
+    let id = e.currentTarget.id;
     swiper2[0].slideTo(id)
     swiper2[1].slideTo(id)
-    counter.html('' + (id + 1) + '/' + totalSlides + '');
-    $('.section__slide-heading-box').each(function(e) {
-      if (e === id) {
+    counter.html('' + id + '/' + totalSlides + '');
+    box.each(function(e) {
+      if (e == id - 1) {
         $(this).addClass('box--active')
       } else {
         $(this).removeClass('box--active')
       }
-     })
+    })
   });
 
   new WOW().init();

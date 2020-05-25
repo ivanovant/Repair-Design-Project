@@ -4,12 +4,45 @@
   .nav
     &__link
       margin-right: 1rem
-
+  .section__process-wrap  
+    z-index: 1
+    background: url('../img/process-elipse.svg') no-repeat -350% 39% / contain
+  .process
+    &__step
+      &--first
+        margin-top: -0.4rem
+        transform: translateX(7.5rem)
+        margin-bottom: 4.55rem
+      &--second
+        margin-bottom: 9rem
+      &--third
+        margin-bottom: 9rem
 @media screen and ( max-width: 1080px )
   .clients
     &__card
       min-height: 37rem
+  .section__process-wrap  
+    z-index: 1
+    background: url('../img/process-elipse.svg') no-repeat -450% 39% / contain
+  .process
+    &__step
+      &--first
+        margin-top: -0.4rem
+        transform: translateX(4.7rem)
+        margin-bottom: 4.55rem
+      &--second
+        margin-bottom: 9rem
+        margin-right: 4.3rem
+      &--third
+        transform: translateX(1.1rem)
+        margin-bottom: 9rem
+      &--fourth
+        transform: translateX(2.6rem)
 @media screen and ( max-width: 992px )
+  .section
+    &__process
+  .col-60 
+    display: none
   .nav
     display: none
   .hero
@@ -124,6 +157,10 @@
     max-width: 75%
   .col-33
     max-width: 75%
+  .col-60 
+    display: none
+  .col-40
+    max-width: 100%
   .section
     &__design
       padding-top: 5rem
@@ -318,6 +355,8 @@
     &-types
       &__heading
         margin-bottom: 1.5rem
+    &__process
+      display: none
     &__design
       margin-bottom: 26.1rem
       padding-bottom: 5rem

@@ -30,7 +30,7 @@ function bs() {
 
 // Compressing jpg&png images
 function tinypng() {
-  return src("./img/process-bg.jpg")
+  return src("./img/gulpmin/*.jpg")
     .pipe(minImg({
       key: 'yY89MnhWVL6TNTN5l7b4lQPtcxzw3f17',
       sigFile: 'images/.tinypng-sigs',
@@ -44,7 +44,8 @@ function tinypng() {
     return src("./sass/**/*.sass", "./sass/**/*.scss")
     .pipe(sass())
     .pipe(autoprefixer({
-      cascade: false
+      cascade: false,
+      flexbox: true
     }))
     .pipe(dest('./css'))
     .pipe(browserSync.stream());
