@@ -373,25 +373,21 @@ $(document).ready(function () {
   });
 
   const swiper3 = new Swiper ('.swiper3', {
-    direction: 'horizontal',
     loop: true,
-    pagination: {
-      el: '.swiper-pagination3',
-    },
     navigation: {
       nextEl: '.swiper-button-next3',
       prevEl: '.swiper-button-prev3',
     },
   });
+
   const list = $('.section__style-list');
-  const item = $('.section__style-item');
+  const el = $('.section__style-item');
 
   list.on('click', (e) => {
-    let i = item.index(e.target) + 1;
+    let target = e.target;
+    let i = $(el).index(target) + 1;
     swiper3.slideTo(i);
-    for (let i = 1; i <= 11; i++) {
-      item.removeClass('item-active');
-    };
-    $(e.target).addClass('item-active');
+    $(el).each(i => $(el).removeClass('item-active'))
+    $(target).addClass('item-active');
   });
 });
