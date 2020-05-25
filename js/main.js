@@ -145,8 +145,8 @@ $(document).ready(function () {
 
   box.on('click', (e) => {
     let id = e.currentTarget.id;
-    swiper2[0].slideTo(id)
-    swiper2[1].slideTo(id)
+    swiper2[0].slideTo(id - 1)
+    swiper2[1].slideTo(id - 1)
     counter.html('' + id + '/' + totalSlides + '');
     box.each(function(e) {
       if (e == id - 1) {
@@ -370,5 +370,28 @@ $(document).ready(function () {
   
   $(function() {
     ymap();
+  });
+
+  const swiper3 = new Swiper ('.swiper3', {
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination3',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next3',
+      prevEl: '.swiper-button-prev3',
+    },
+  });
+  const list = $('.section__style-list');
+  const item = $('.section__style-item');
+
+  list.on('click', (e) => {
+    let i = item.index(e.target) + 1;
+    swiper3.slideTo(i);
+    for (let i = 1; i <= 11; i++) {
+      item.removeClass('item-active');
+    };
+    $(e.target).addClass('item-active');
   });
 });
