@@ -17,6 +17,31 @@
     &-title
       max-width: 29.3571rem
       padding-top: 8.75rem
+  &__col
+    transform: translateY(-8.0379rem)
+  &__picture
+    position: absolute
+    left: 0
+    top: 0
+  &__image
+    &-first
+      width: 25.2857rem
+      height: 39.8486rem
+      margin-bottom: 2.7929rem
+    &-second
+      width: 25.2857rem
+      height: 24.9286rem
+    &-third
+      width: 25.2857rem
+      height: 19.6429rem
+      margin-bottom: 2.6429rem
+    &-fourth
+      width: 25.2857rem
+      height: 44.6343rem
+  &__wrap
+    &--left
+      padding-top: 5.15rem
+      margin-right: 3.0714rem
 .section
   &__style
     padding: 0 0 5.6rem 1.1rem
@@ -33,14 +58,9 @@
       font-size: 1.7rem
       letter-spacing: 0.025rem
       margin-bottom: 1.585rem
-      &::after
-        content: ''
-        position: absolute
-        left: 0
-        bottom: 0
-        border-bottom: 1px solid $primary
-        width: 10.4rem
+
     &-image
+      position: relative
       &::before
         content: ''
         position: absolute
@@ -50,41 +70,17 @@
         height: 100%
         // background-color: $scale
       &-wrap
-        position: relative
         display: flex
         flex-direction: column
-        justify-content: space-between
         align-items: center
         z-index: 50
-#first
-  position: absolute
-  top: -2.9286rem
-  left: 0
-  width: 25.2857rem
-  height: 39.8486rem
-  background: url('../img/style/image-1.jpg') no-repeat center
-#second
-  position: absolute
-  top: 39.7021rem
-  left: 0
-  width: 25.2857rem
-  height: 24.9286rem
-  background: url('../img/style/image-2.jpg') no-repeat center
-#third
-  position: absolute
-  top: -8.0379rem
-  width: 25.2857rem
-  height: 19.6429rem
-  background: url('../img/style/image-3.jpg') no-repeat center
-#fourth
-  position: absolute
-  top: 14.2479rem
-  width: 25.2857rem
-  height: 44.6343rem
-  background: url('../img/style/image-4.jpg') no-repeat center
-#wrap
-  margin-right: 3.4rem
-
-
-
-
+.item
+  &-active
+    color: $primary
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      border-bottom: 1px solid $primary
+      width: 10.4rem
