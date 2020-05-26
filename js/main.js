@@ -397,4 +397,26 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev4',
     },
   });
+  
+  $('.control__video').one('mouseenter', () => {
+    $( "<script src=\"https://www.youtube.com/iframe_api\"></script>" ).appendTo( ".control__video" );
+  });
+
+  var player;
+  
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: 'zh-bQ6W7WU8',
+          events: {
+              'onReady': videoPlay,
+            }
+          });
+        })
+        
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
+
 });
