@@ -281,7 +281,7 @@ $(document).ready(function () {
     }
   });
 
-  $('[type=tel]').mask('+7 (000) 000 00-00', {placeholder: "+7 (___) ___-__-__"});
+  $('[type=tel]').mask('+7 (000) 000 00-00', {placeholder: "Ваш номер телефона:"});
 
   let spinner = $('.ymap-container').children('.loader');
 
@@ -373,7 +373,6 @@ $(document).ready(function () {
   });
 
   const swiper3 = new Swiper ('.swiper3', {
-    loop: true,
     navigation: {
       nextEl: '.swiper-button-next3',
       prevEl: '.swiper-button-prev3',
@@ -389,5 +388,13 @@ $(document).ready(function () {
     swiper3.slideTo(i);
     $(el).each(i => $(el).removeClass('item-active'))
     $(target).addClass('item-active');
+  });
+
+  const swiper4 = new Swiper ('.swiper4', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next4',
+      prevEl: '.swiper-button-prev4',
+    },
   });
 });

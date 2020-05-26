@@ -1,6 +1,6 @@
 .style
   position: relative
-  background: $dark url(../img/style/style-bg.jpg) no-repeat center / 100%
+  background: $dark url(../img/style/style-bg.jpg) no-repeat center / cover
   &::before
     content: ''
     position: absolute
@@ -18,11 +18,8 @@
       max-width: 29.3571rem
       padding-top: 8.75rem
   &__col
-    transform: translateY(-8.0379rem)
+    transform: translate(1.6rem, -8.0379rem)
   &__picture
-    position: absolute
-    left: 0
-    top: 0
   &__image
     &-first
       width: 25.2857rem
@@ -42,6 +39,9 @@
     &--left
       padding-top: 5.15rem
       margin-right: 3.0714rem
+  &__swiper
+    &-slide
+      flex-wrap: nowrap
 .section
   &__style
     padding: 0 0 5.6rem 1.1rem
@@ -62,14 +62,6 @@
 
     &-image
       position: relative
-      &::before
-        content: ''
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        // background-color: $scale
       &-wrap
         display: flex
         flex-direction: column
@@ -85,3 +77,32 @@
       bottom: 0
       border-bottom: 1px solid $primary
       width: 10.4rem
+.swiper4
+  display: none
+.swiper
+  &-button
+    &-prev, &-next
+      width: 42px
+      bottom: 0
+      top: auto
+      z-index: 150
+    &-prev4
+      left: 14px
+      bottom: 50%
+      transform: translateY(50%)
+      width: 36px
+      height: 36px
+      background: $primary url(../img/stroke-prev.svg) no-repeat center
+      border-radius: 50%
+    &-next4
+      right: 14px
+      bottom: 50%
+      transform: translateY(50%)
+      width: 36px
+      height: 36px
+      background: $primary url(../img/stroke-next.svg) no-repeat center
+      border-radius: 50%
+.style__american
+  display: block
+.mobile-american
+  display: none

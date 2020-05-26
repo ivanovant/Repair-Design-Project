@@ -1,3 +1,14 @@
+@media screen and ( max-width: 1357px )
+  .style
+    &__section
+      &-title
+        padding-top: 4rem
+    &__col
+      min-width: 50%
+      transform: translate(4rem, -8.0379rem)
+  .col-36
+    max-width: 36%
+    min-width: 25%
 @media screen and ( max-width: 1270px )
   html 
     font-size: 12px
@@ -17,6 +28,10 @@
         margin-bottom: 9rem
       &--third
         margin-bottom: 9rem
+  .style
+    &__section
+      &-title
+        padding-top: 4rem
 @media screen and ( max-width: 1080px )
   .clients
     &__card
@@ -38,9 +53,60 @@
         margin-bottom: 9rem
       &--fourth
         transform: translateX(2.6rem)
+  .style
+    &__section
+      &-title
+        padding-top: 3rem
+    &__col
+      min-width: 55%
+      transform: translate(4rem, -8.0379rem)
+  .col-36
+    width: 23%
+    min-width: 24%
 @media screen and ( max-width: 992px )
+  .background
+    &::before
+      display: none
+    &::after
+      display: none
+    &__lines
+      display: none
+    &__image
+      &::before
+        display: none
+      &::after
+        display: none
   .section
     &__process
+      display: none
+    &__style
+      background: $light
+      &-list
+        display: none
+  .style
+    background: $light
+    &::before
+      background: $light
+    &__heading
+      margin: -0.5rem 0 1.7143rem -0.8571rem
+      line-height: 2.6rem
+      letter-spacing: -0.007rem !important
+    &__section
+      &-title
+        text-align: center
+        margin: auto
+        padding-top: 0
+    &__col
+      width: 100%
+      min-width: 100%
+      transform: translate(0)
+    &__section
+      &-title
+        text-align: center
+    &__image
+      &-first
+        width: 100%
+        margin-bottom: 0
   .col-60 
     display: none
   .nav
@@ -54,6 +120,16 @@
       &:hover
         color: $light
         cursor: default
+  .card
+    &__box
+      &-img
+        &::after
+          display: none
+    &__text
+      margin-left: 0
+  .title
+    &--dark
+      color: $dark
   .button
     &:hover
       cursor: default
@@ -91,18 +167,36 @@
       cursor: default
   .col-45
     max-width: 85%
+    margin: auto
   .col-55
     max-width: 85%
+    margin: auto
   .col-30
-    max-width: 49%
+    max-width: 100%
+    margin: auto
+  .col-31
+    max-width: 50%
+    margin: auto
   .col-33
-    max-width: 32%
+    max-width: 100%
+    margin: auto
+  .col-36
+    max-width: 100%
+    min-width: 100%
+    margin: auto
+  .col-64
+    max-width: 100%
+    min-height: 100%
+    margin: auto
   .row
-    align-items: flex-start
-    flex-wrap: wrap
+    display: block
+    // align-items: flex-start
+    // flex-wrap: wrap
   .section
     &__wrap
       margin-bottom: 1.4rem
+    &__projects
+      background: $mobile-dark
     &__steps
       display: none
     &__team
@@ -110,15 +204,51 @@
       padding-bottom: 5rem
       background-color: $dark 
     &__design
-      padding-top: 0
+      margin-top: -10rem
+      padding-top: 35.5rem
+      padding-bottom: 0
+      background-color: $dark
+      color: $light
+      &__card
+        margin: auto
+        margin-bottom: 4.5rem
+      &__section-title
+        margin-bottom: 3.1rem
+      .section-title
+        &__text
+          font-size: 1.25rem
+          max-width: 25rem
+          line-height: 1.75rem
+          padding-top: 1.7rem
     &__types
       padding-top: 0
+    &__clients
+      &::before
+        display: none
+    &__style
   .types
     &__card
+      margin: auto
+      max-width: fit-content
       margin-bottom: 3.7rem
+  .swiper3
+    display: none
+  .swiper4
+    margin-bottom: -25.5rem
+    display: block
   .design
+    &__heading
+      margin-bottom: 1rem
     &__card
-      margin-bottom: 13rem
+      margin: auto
+      max-width: fit-content
+      margin-bottom: 14rem
+    &-card
+      &__text
+        margin-left: 0
+        margin-top: -11.8rem
+        max-width: 22.2rem
+        padding: 1.3rem 2.1rem
   .team
     &__text
       color: $light
@@ -137,73 +267,76 @@
   .footer
     padding-top: 5rem
     &__map
-      width: 57.0714rem
+      width: 100%
     &__form
   .card__box-img::after
     min-height: 100%
   .clients
     &__card
-      min-height: 43rem
+      min-height: 25rem
+      max-width: 100%
+      margin-bottom: 5rem
   .seccuss
     &__close
       &:hover
         background: transparent url('../img/close.svg') no-repeat center
         cursor: default
-@media screen and ( max-width: 798px )
-  .row
-    flex-direction: column
-    align-items: center
-  .col-30
-    max-width: 75%
-  .col-33
-    max-width: 75%
-  .col-60 
-    display: none
-  .col-40
+  .ymaps-2-1-76-map
+    width: 100%
+  .ymap-container
+    width: 100%
     max-width: 100%
+  .team
+    &__section
+      &-title
+        margin-top: 32rem
+    &__section-title
+      margin-bottom: 6.7rem
+      margin-top: 2rem
+    &__text
+      display: none
+    &-card
+      &__text
+        width: 100%
+        max-width: 19.5rem
+        margin-top: -6.4rem
+        padding: 1.2rem 0 0rem 0 
+        transform: translateX(-1.2rem)
+      &__title
+        font-size: 1.5rem
+        margin-bottom: 0.7rem
+        letter-spacing: 0.001rem
+      &__subtitle
+        font-size: 1.5rem
+        margin-bottom: 1.9rem
+      &__tag
+        font-size: 0.96rem
+        letter-spacing: 0.07rem
+        padding: 1.3rem 0
+        width: 19.5rem
+        text-align: center
+    &__card
+      width: 25rem
+      margin: auto
+      margin-bottom: 4rem
+      transform: translateX()
+      &--third
+        margin: auto
+
+@media screen and ( max-width: 798px )
+  .section__style-image
+    width: 100%
+    height: 100%
   .section
     &__design
-      padding-top: 5rem
-      padding-bottom: 0
-      background-color: $dark
-      color: $light
-      &__card
-        margin-left: 0
-        margin-bottom: 4.5rem
-      &__section-title
-        margin-bottom: 3.1rem
-      .section-title
-        &__text
-          font-size: 1.25rem
-          max-width: 25rem
-          line-height: 1.75rem
-          padding-top: 1.7rem
+      padding-bottom: 25rem
+    &__clients
+      display: none
     &__team
       margin-top: 0
       background-color: $dark
       padding-top: 0.1rem
       padding-bottom: 5rem
-    &__clients
-      display: none
-  .design
-    &__heading
-      margin-bottom: 1rem
-    &__card
-      margin-bottom: 14rem
-    &-card
-      &__text
-        margin-left: 0
-        margin-top: -11.8rem
-        max-width: 22.2rem
-        padding: 1.3rem 2.1rem
-  .team
-    &__section
-      &-title
-        margin-top: 32rem
-    &__text
-      color: $light
-    &__card
-      margin-bottom: 5rem
   .title--dark
     color: $dark
   .types
@@ -247,8 +380,6 @@
       padding: 0.04rem 1rem 0.58rem 0rem
   .footer
     padding-top: 5rem
-    &__map
-      width: 44.0714rem
     &__heading
       max-width: 40rem
       margin-top: 3rem
@@ -269,7 +400,7 @@
     line-height: 2.5rem
   .hero
     max-height: 44.3rem
-    background: $mobile-dark
+    background: $mobile-dark url(../img/hero-bg.jpg) no-repeat center/cover
     &::after
       display: none
     &__container
@@ -293,7 +424,7 @@
   .section
     background: $mobile-dark
     &__wrap
-      margin-bottom: 0.5rem
+      margin-bottom: 1.5rem
     &__projects
       padding-top: 2.1rem
       padding-bottom: 27.2rem
@@ -351,20 +482,20 @@
     &__control
       padding: 4.28rem 0 0rem 0
     &__types
-      padding: 5.2rem 0
+      padding: 5.2rem 0 0 0
     &-types
       &__heading
         margin-bottom: 1.5rem
-    &__process
-      display: none
     &__design
+      margin-top: 0
       margin-bottom: 26.1rem
       padding-bottom: 5rem
+      padding-top: 18rem
     &__team
       padding-top: 0rem
       position: relative
       margin-top: -29.7rem
-      padding-bottom: 2.4rem
+      padding-bottom: 0.1rem
     &-team
       &__heading
         color: $light
@@ -375,33 +506,7 @@
     font-size: 1.27rem
     line-height: 1.8rem
     letter-spacing: -0.01rem
-  .team
-    &__section-title
-      margin-bottom: 6.7rem
-      margin-top: 2rem
-    &-card
-      &__text
-        margin: auto
-    &__card
-      margin-bottom: 6rem
-      &--first
-        &::before
-          width: 5.9rem
-          height: 5.9rem
-          left: -2.95rem
-          top: -2.95rem
-      &--second
-        &::before
-          width: 5.9rem
-          height: 5.9rem
-          left: -2.95rem
-          top: -2.95rem
-      &--third
-        &::before
-          width: 5.9rem
-          height: 5.9rem
-          left: -2.95rem
-          top: -2.95rem
+
   .control
     background-color: $mobile-dark
     color: $light
@@ -411,7 +516,7 @@
       max-width: 28rem
       min-height: 17.2rem
       margin-bottom: 2.4rem
-      background: $dark url('../img/webp/minimg/video-mask-mobile.webp') no-repeat center
+      background: $dark url('../img/video-mask-mobile.jpg') no-repeat center
     &__text
       max-width: 29rem
       width: 29rem
@@ -477,6 +582,10 @@
         margin-bottom: 3.2rem
     &__card
       margin-bottom: 6.6rem
+  .style
+    &__heading
+      font-size: 1.8rem
+      margin-bottom: 2.8rem
   .design
     &__card
       margin-bottom: 18.3rem
@@ -546,14 +655,18 @@
     max-width: 100%
   .col-33
     max-width: 100%
+  .col-36
+    max-width: 100%
   .col-45
     max-width: 28.3rem
   .col-55
     max-width: 100%
+  .swiper4
+    margin-bottom: -20rem
   .swiper
     &-slide
       &__text
-        min-width: 35%
+        min-width: 34.7%
         margin-right: 3.5rem
         margin-bottom: 1.1rem
         &:nth-of-type(3)
@@ -570,7 +683,7 @@
   .swiper-container-horizontal>.swiper-pagination-bullets
     bottom: 1.3rem
   .footer
-    padding-top: 3rem
+    padding-top: 0rem
     padding-bottom: 0rem
     background: $mobile-dark
     &__title
@@ -581,7 +694,7 @@
       max-width: 100%
       padding: 0
       margin-bottom: 4rem
-      margin-top: 0
+      margin-top: -1rem
     &__form
       max-width: 100%
       padding-left: 0.1rem
@@ -608,7 +721,6 @@
       background: $mobile-dark
       display: none
     &__map
-      width: 28.5rem
       height: 21.3rem
       margin-bottom: 0rem
     &-contacts__wrap
@@ -616,35 +728,28 @@
       flex-direction: column-reverse
       padding-bottom: 0.2rem
   .team
-    &__text
-      display: none
     &-card
       &__text
-        width: 100%
-        max-width: 19.5rem
-        margin-top: -6.4rem
-        padding: 1.2rem 0 0rem 0 
-        transform: translateX(-0.3rem)
-      &__title
-        font-size: 1.5rem
-        margin-bottom: 0.7rem
-        letter-spacing: 0.001rem
-      &__subtitle
-        font-size: 1.5rem
-        margin-bottom: 1.9rem
-      &__tag
-        font-size: 0.96rem
-        letter-spacing: 0.07rem
-        padding: 1.3rem 0
-        width: 19.5rem
-        text-align: center
+        margin-top: -6.7rem
+        transform: translateX(-0.4rem)
     &__card
-      width: 25rem
-      margin: 0 0 7.5rem 0
-      transform: translateX(1.56rem)
+      margin-left: auto
+      margin-bottom: 7.5rem
+      transform: translateX(1.6rem)
+      width: 100%
+      max-width: 25.4rem
+      &--first
+        &::before
+          left: -3rem
+          top: -3rem
+      &--second
+        &::before
+          left: -3rem
+          top: -3rem
       &--third
-        margin: 0 0 1rem 0
-
+        &::before
+          left: -3rem
+          top: -3rem
     &__image
       display: none
     &__mobile-image
@@ -656,7 +761,24 @@
   .hero
     &__scroll-down
       display: none
-
+@media screen and ( max-width: 400px )
+  .section__style-image
+    width: 340px
+    height: 242px
+  .style__picture
+  .style__american
+    display: none
+  .mobile-american
+    display: block
+  .style__container
+    width: 98%
+  .swiper4
+    margin-bottom: -15.8rem
+  .section
+    &__design
+      padding-top: 12.7rem
+    &__style
+      padding-left: 0.5rem
 @media screen and ( max-width: 370px )
   body
     overflow-x: hidden
@@ -681,9 +803,14 @@
     &-slide
       &__text
         min-width: 30%
-  .footer
-    &__map
-      width: 20rem
   .team
+    &-card
+      &__text
+        margin-top: -6.7rem
+        transform: translateX(-0.4rem)
     &__card
-      width: 23.5rem
+      margin-left: auto
+      margin-bottom: 7.5rem
+      transform: translateX(1.4rem)
+      width: 100%
+      max-width: 23.4rem
