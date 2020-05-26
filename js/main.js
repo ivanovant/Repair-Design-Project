@@ -384,7 +384,7 @@ $(document).ready(function () {
 
   list.on('click', (e) => {
     let target = e.target;
-    let i = $(el).index(target) + 1;
+    let i = $(el).index(target);
     swiper3.slideTo(i);
     $(el).each(i => $(el).removeClass('item-active'))
     $(target).addClass('item-active');

@@ -6,8 +6,8 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const minImg = require('gulp-tinypng-compress');
 const htmlmin = require('gulp-htmlmin');
-// const uglify = require('gulp-minify');
-// const babel = require('gulp-babel');
+const uglify = require('gulp-minify');
+const babel = require('gulp-babel');
 
 // Static server
 function bs() {
@@ -57,12 +57,12 @@ function bs() {
   //         .pipe(dest('./js/min'))
   //       };
       
-// function minjs(done) {
-//     src("dist/js/main.js")
-//       .pipe(uglify())
-//       .pipe(dest('dist/js/'));
-//     done();
-//   };
+function minjs(done) {
+    src("dist/js/main.js")
+      .pipe(uglify())
+      .pipe(dest('dist/js/'));
+    done();
+  };
 
 function html(done) {
   src("./**.html")
