@@ -49,6 +49,7 @@ phpmailer/
 css/min/
 js/min
 minhtml/
+textolite/
 # PHP files
 *.php
 

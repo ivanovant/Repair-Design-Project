@@ -9,6 +9,14 @@ const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-minify');
 const babel = require('gulp-babel');
 
+// const webp = require('gulp-webp');
+ 
+// function imgwebp (done) {
+//         src(['img/**/**', '!img/**/**.svg'])
+//         .pipe(webp())
+//         .pipe(dest('imgmin/'));
+//       done();
+//       };
 // Static server
 function bs() {
   serveSass();
@@ -127,6 +135,6 @@ function tinypng(done) {
   exports.serve = bs;
   // exports.minimg = tinypng;
   // exports.mincss = mincss;
-
+  // exports.web = imgwebp;
   exports.js = minjs;
   exports.build = series(buildCSS, buildJS, html, php, fonts, tinypng);
