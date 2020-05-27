@@ -26,6 +26,7 @@ $(document).ready(function () {
         success = $('.success'),
         modalBtn = $('[data-toggle=modal]'),
         scrollUp = $('.scroll-up__item'),
+        scrollDown = $('.hero__scroll-down'),
         successBtn = $('[data-toggle=success]');
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -59,8 +60,24 @@ $(document).ready(function () {
   scrollUp.click(function () {
       $('body,html').animate({
           scrollTop: 0
-      }, 1200);
+      }, 1500);
       return false;
+  });
+  scrollDown.click(function () {
+      $('body,html').animate({
+          scrollTop: 900
+      }, 1500);
+      return false;
+  });
+  const link = $('.nav__link');
+
+  link.on('click', (e) => {
+    event.preventDefault();
+    let target = $(e.target).attr('href')
+    $('body,html').animate({
+      scrollTop: $(target).offset().top - 60
+      }, 1700);
+    return false;
   });
 
   const swiper1 = new Swiper ('.swiper1', {
@@ -160,9 +177,52 @@ $(document).ready(function () {
   new WOW().init();
   const modalForm = $('.modal__form'),
         controlForm = $('.control__form'),
-        footerForm = $('.footer__form');
+        footerForm = $('.footer__form'),
+        processForm = $('.process__form');
 
   modalForm.validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      userEmail: {
+        required: true,
+        email: true
+      },
+      policyCheckbox: "required"
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее пятнадцати букв"
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      },
+      policyCheckbox: "Заполните поле"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          success.toggleClass('success--visible');
+        }
+      });
+    }
+  });
+  processForm.validate({
     errorClass: "invalid",
     errorElement: "div",
     rules: {

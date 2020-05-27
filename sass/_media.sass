@@ -9,6 +9,13 @@
   .col-36
     max-width: 36%
     min-width: 25%
+  .section
+    &__process
+      &-wrap
+        padding-right: 1.5rem
+  .process
+    &__wrap
+      padding-left: 3rem
 @media screen and ( max-width: 1270px )
   html 
     font-size: 12px
@@ -161,10 +168,12 @@
       &:hover 
         color: $primary
         cursor: default
-  .phone
-    &:hover
-      color: $primary
-      cursor: default
+  .contacts
+    &__phone
+      color: $light
+      &:hover
+        color: $light
+        cursor: default
   .col-45
     max-width: 85%
     margin: auto
@@ -225,7 +234,16 @@
     &__clients
       &::before
         display: none
-    &__style
+    &-title
+      &__link
+        &-mail
+          &:hover
+            cursor: default
+            background-color: $primary
+        &-instagram
+          &:hover
+            cursor: default
+            background-color: $primary
   .types
     &__card
       margin: auto
@@ -269,6 +287,10 @@
     &__map
       width: 100%
     &__form
+    &__phone
+      color: $primary
+      &:hover
+        color: $primary
   .card__box-img::after
     min-height: 100%
   .clients
@@ -276,7 +298,7 @@
       min-height: 25rem
       max-width: 100%
       margin-bottom: 5rem
-  .seccuss
+  .success
     &__close
       &:hover
         background: transparent url('../img/close.svg') no-repeat center
@@ -341,7 +363,6 @@
     color: $dark
   .types
     &__card
-      margin-left: 0
       margin-bottom: 6.47rem
     &__section-title
       margin-bottom: 3.4rem
@@ -390,7 +411,6 @@
   .contacts
     &__phone
       margin-right: 0
-      color: $light
       text-decoration: none
     &__button
       display: none
@@ -762,6 +782,11 @@
     &__scroll-down
       display: none
 @media screen and ( max-width: 400px )
+  .control
+    &__text
+      width: 100%
+  .container
+    width: 95%
   .section__style-image
     width: 340px
     height: 242px

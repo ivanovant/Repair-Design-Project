@@ -438,6 +438,12 @@ template {
 input.invalid {
   border-bottom: 1px solid tomato; }
 
+.section-title__link-mail:hover {
+  background-color: #131313; }
+
+.section-title__link-instagram:hover {
+  background-color: #131313; }
+
 #user-name-error {
   position: absolute;
   bottom: -1.3rem;
@@ -458,13 +464,13 @@ input.invalid {
 
 #control-user-name-error {
   position: absolute;
-  bottom: -1.3rem;
+  bottom: -1rem;
   left: 0;
   color: tomato; }
 
 #control-user-phone-error {
   position: absolute;
-  bottom: -1.3rem;
+  bottom: -1rem;
   left: 0;
   color: tomato; }
 
@@ -495,13 +501,34 @@ input.invalid {
 #footerPolicyCheckbox-error {
   position: absolute;
   bottom: -1.3rem;
-  left: 10.3rem;
+  left: 8.5rem;
   color: tomato; }
 
 #controlPolicyCheckbox-error {
   position: absolute;
-  bottom: -1.3rem;
-  left: 17.7rem;
+  bottom: -1.4rem;
+  left: 15.8rem;
+  color: tomato; }
+
+#process-user-name-error {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  color: tomato; }
+
+#process-user-phone-error {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  color: tomato; }
+
+#process-user-email {
+  margin-bottom: 2rem; }
+
+#process-user-email-error {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0;
   color: tomato; }
 
 .container {
@@ -688,12 +715,19 @@ img {
 a {
   outline: none; }
 
+.swiper-slide {
+  opacity: 0; }
+
+.swiper-slide-active {
+  opacity: 1;
+  transition: 0.8s; }
+
 .header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 400;
   background-color: #131313;
   padding: 1.51rem 0; }
 
@@ -1091,7 +1125,7 @@ li {
   align-items: flex-end;
   position: relative;
   justify-content: flex-start;
-  width: 40.4rem;
+  max-width: 40.4rem;
   min-height: 50rem;
   padding-top: 5.4rem;
   padding-right: 0.6rem; }
@@ -1726,6 +1760,15 @@ sup {
     font-style: normal;
     font-size: 1.428rem;
     text-align: center; }
+  .footer__phone {
+    text-decoration: none;
+    font-family: Yeseva One;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.428rem;
+    color: #E3B873; }
+    .footer__phone:hover {
+      color: #ffffff; }
   .footer__heading {
     display: flex;
     flex-wrap: wrap;
@@ -1847,7 +1890,8 @@ sup {
   flex-basis: 100%;
   font-size: 1.5rem;
   letter-spacing: -0.045rem;
-  margin-bottom: 1.7rem; }
+  margin-bottom: 1.7rem;
+  font-style: normal; }
 
 .section-title__link {
   width: 2rem;
@@ -2051,7 +2095,11 @@ sup {
     transform: translate(4rem, -8.0379rem); }
   .col-36 {
     max-width: 36%;
-    min-width: 25%; } }
+    min-width: 25%; }
+  .section__process-wrap {
+    padding-right: 1.5rem; }
+  .process__wrap {
+    padding-left: 3rem; } }
 
 @media screen and (max-width: 1270px) {
   html {
@@ -2176,9 +2224,11 @@ sup {
   .logo__link:hover {
     color: #E3B873;
     cursor: default; }
-  .phone:hover {
-    color: #E3B873;
-    cursor: default; }
+  .contacts__phone {
+    color: #ffffff; }
+    .contacts__phone:hover {
+      color: #ffffff;
+      cursor: default; }
   .col-45 {
     max-width: 85%;
     margin: auto; }
@@ -2234,6 +2284,12 @@ sup {
     padding-top: 0; }
   .section__clients::before {
     display: none; }
+  .section-title__link-mail:hover {
+    cursor: default;
+    background-color: #E3B873; }
+  .section-title__link-instagram:hover {
+    cursor: default;
+    background-color: #E3B873; }
   .types__card {
     margin: auto;
     max-width: -webkit-fit-content;
@@ -2273,13 +2329,17 @@ sup {
     padding-top: 5rem; }
     .footer__map {
       width: 100%; }
+    .footer__phone {
+      color: #E3B873; }
+      .footer__phone:hover {
+        color: #E3B873; }
   .card__box-img::after {
     min-height: 100%; }
   .clients__card {
     min-height: 25rem;
     max-width: 100%;
     margin-bottom: 5rem; }
-  .seccuss__close:hover {
+  .success__close:hover {
     background: transparent url("../img/close.svg") no-repeat center;
     cursor: default; }
   .ymaps-2-1-76-map {
@@ -2337,7 +2397,6 @@ sup {
   .title--dark {
     color: #131313; }
   .types__card {
-    margin-left: 0;
     margin-bottom: 6.47rem; }
   .types__section-title {
     margin-bottom: 3.4rem; }
@@ -2381,7 +2440,6 @@ sup {
     padding: 1.85rem 0; }
   .contacts__phone {
     margin-right: 0;
-    color: #ffffff;
     text-decoration: none; }
   .contacts__button {
     display: none; }
@@ -2750,6 +2808,10 @@ sup {
     display: none; } }
 
 @media screen and (max-width: 400px) {
+  .control__text {
+    width: 100%; }
+  .container {
+    width: 95%; }
   .section__style-image {
     width: 340px;
     height: 242px; }
