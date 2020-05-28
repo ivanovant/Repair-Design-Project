@@ -773,11 +773,15 @@ a {
 
 .animate__animated {
   -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1; }
+  animation-iteration-count: 1;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
 
 .animated {
   -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1; }
+  animation-iteration-count: 1;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
 
 .hero {
   position: relative;
@@ -2853,7 +2857,9 @@ sup {
     .container__types {
       width: 90%; }
     .container__design {
-      width: 90%; }
+      width: 90.9%; }
+    .container__footer {
+      width: 90.9%; }
   .section__style-image {
     width: 340px;
     height: 242px; }
