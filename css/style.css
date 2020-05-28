@@ -771,6 +771,14 @@ a {
 .contacts__phone {
   margin-right: 3.1rem; }
 
+.animate__animated {
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
+
+.animated {
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
+
 .hero {
   position: relative;
   display: flex;
