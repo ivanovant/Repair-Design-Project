@@ -45,6 +45,8 @@
   font-size: 1.31rem
   outline: none
   &:focus
+    -webkit-box-shadow: inset -14px 14px 12px -17px rgba(227,184,115,1)
+    -moz-box-shadow: inset -14px 14px 12px -17px rgba(227,184,115,1)
     box-shadow: inset -14px 14px 12px -17px rgba(227,184,115,1)
   &--light
     border-bottom: 1px solid rgba($light, 0.15)
@@ -112,6 +114,10 @@ input
       &-instagram
         &:hover
           background-color: $dark
+.button:active, button:focus
+  outline: none
+.button::-moz-focus-inner
+  border: 0
 #user-name-error
   position: absolute
   bottom: -1.3rem

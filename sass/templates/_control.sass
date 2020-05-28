@@ -66,6 +66,26 @@
     position: relative
     margin: auto
     cursor: pointer
+    outline: none
+    border: none
+    &::-moz-focus-inner
+      outline: none
+      border: 0
+    &:focus
+      border: none
+      outline: none
+    &:active
+      border: none
+      outline: none
+    &::after
+      display: none
+    &:checked
+      border: none
+      outline: none
+.control
+  &__video
+    outline: none
+    border: none
 .background
   &__image
     &::after

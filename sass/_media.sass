@@ -162,7 +162,20 @@
   .swiper
     &-button
       &-prev, &-next
+        outline: none
         cursor: default
+        &:checked
+          border: none
+          outline: none
+        &::-moz-focus-inner
+          outline: none
+          border: 0
+        &:focus
+          border: none
+          outline: none
+        &:active
+          border: none
+          outline: none
     &-slide
       &__text
         flex-basis: 31%
@@ -400,6 +413,8 @@
       &-group
         max-width: 15.8rem
   .input
+    &:focus
+      box-shadow: inset -14px 14px 12px -17px rgba(227,184,115,1)
     &--dark
       padding: 0.04rem 1rem 0.58rem 0rem
   .footer
@@ -559,6 +574,8 @@
       flex-direction: column
       max-width: fit-content
     &__input
+      &:focus
+        box-shadow: inset -14px 14px 12px -17px rgba(227,184,115,1)
       &::placeholder
         letter-spacing: 0.05rem
         color: $light
@@ -605,7 +622,11 @@
   .video
     &__play
       max-width: 5.2rem
+      outline: none
+      border: none
   .input
+    &:focus
+      box-shadow: inset -14px 14px 12px -17px rgba(227,184,115,1)
     &--dark
       padding: 0.04rem 3rem 0.8rem 0rem
       width: 28rem
@@ -735,6 +756,8 @@
       padding-left: 0.1rem
     &__input
       padding: 0.2rem 0 0.7rem 0
+      &:focus
+        box-shadow: inset -14px 14px 12px -17px rgba(227,184,115,1)
       &::placeholder
         letter-spacing: 0.09rem
       &-group
@@ -857,6 +880,8 @@
   .row
     align-items: baseline
   .input
+    &:focus
+      box-shadow: inset -14px 14px 12px -17px rgba(227,184,115,1)
     &--dark
       width: 25rem
   .col-45
