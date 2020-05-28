@@ -412,11 +412,11 @@ template {
 .scroll-up {
   position: fixed;
   right: 8rem;
-  bottom: 5rem;
+  bottom: 10rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 299; }
+  z-index: 151; }
   .scroll-up__item {
     display: none;
     position: relative;
@@ -428,7 +428,8 @@ template {
     background-size: 1rem;
     transform: rotate(180deg);
     cursor: pointer;
-    transition: 0.2s; }
+    transition: 0.2s;
+    box-shadow: 0px 0px 20px 7px #afafaf; }
     .scroll-up__item:hover {
       transform: rotate(180deg);
       width: 4rem;
@@ -523,7 +524,7 @@ input.invalid {
   color: tomato; }
 
 #process-user-email {
-  margin-bottom: 2rem; }
+  margin-bottom: 0.8rem; }
 
 #process-user-email-error {
   position: absolute;
@@ -535,6 +536,10 @@ input.invalid {
   width: 90%;
   max-width: 1256px;
   margin: auto; }
+  .container__types {
+    width: 87.3%; }
+  .container__design {
+    width: 87.3%; }
 
 .row {
   display: flex;
@@ -608,18 +613,19 @@ img {
   .section__control {
     position: relative; }
   .section__types {
-    padding: 4.9rem 0; }
+    padding: 4.9rem 0 0 0.35rem; }
   .section__process {
     margin-bottom: 16.95rem;
-    padding: 8rem 0 0 0;
+    padding: 13rem 0 0 0;
     z-index: 1;
-    background: transparent url("../img/process-bg.jpg") no-repeat left; }
+    background: transparent url("../img/process-bg.jpg") no-repeat -1% 63%; }
   .section__steps {
     padding-top: 30.3rem;
     padding-bottom: 35.8rem;
     background: #131313 url(../img/bg-line.svg) no-repeat center; }
   .section__design {
     padding-top: 9.7rem;
+    padding-left: 0.3rem;
     margin-bottom: -25.6rem; }
   .section__team {
     margin-top: -34.9rem; }
@@ -1299,7 +1305,7 @@ li {
 .section__style {
   padding: 0 0 5.6rem 1.1rem;
   padding-left: 1.1rem;
-  max-height: 61.0143rem; }
+  max-height: 61.8143rem; }
   .section__style-list {
     display: flex;
     flex-direction: column;
@@ -1334,6 +1340,7 @@ li {
   display: none; }
 
 .swiper-button-prev, .swiper-button-next {
+  outline: none;
   width: 42px;
   bottom: 0;
   top: auto;
@@ -1745,7 +1752,7 @@ sup {
   position: relative;
   z-index: 100; }
   .footer__wrap {
-    background: #181818;
+    background: #181818 url("../img/footer-bg-lines.svg") no-repeat center;
     max-width: 63.07rem;
     margin: auto;
     margin-top: -18.9rem;
@@ -2139,11 +2146,13 @@ sup {
   .style__section-title {
     padding-top: 3rem; }
   .style__col {
-    min-width: 55%;
+    min-width: 54%;
     transform: translate(4rem, -8.0379rem); }
   .col-36 {
-    width: 23%;
-    min-width: 24%; } }
+    width: 25%;
+    min-width: 26%; }
+  .style__container {
+    width: 93%; } }
 
 @media screen and (max-width: 992px) {
   .background::before {
@@ -2391,7 +2400,7 @@ sup {
     margin-top: 0;
     background-color: #131313;
     padding-top: 0.1rem;
-    padding-bottom: 5rem; }
+    padding-bottom: 20rem; }
   .title--dark {
     color: #131313; }
   .types__card {
@@ -2430,7 +2439,14 @@ sup {
     padding-top: 5rem; }
     .footer__heading {
       max-width: 40rem;
-      margin-top: 3rem; } }
+      margin-top: 3rem; }
+  .control__policy {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: auto; }
+  #controlPolicyCheckbox-error {
+    left: 0; } }
 
 @media screen and (max-width: 570px) {
   .header {
@@ -2596,17 +2612,22 @@ sup {
       margin-bottom: 0.9rem; }
       .control__input-group:first-of-type {
         margin-bottom: 5.2rem; }
+    .control__input-label {
+      justify-content: start;
+      margin-top: 0;
+      font-size: 1.3rem;
+      letter-spacing: 0.015rem; }
+      .control__input-label::before {
+        width: 1.5rem;
+        height: 1.5rem; }
     .control__policy {
-      padding-right: 0;
+      max-width: 100%;
+      margin-top: -1rem;
+      margin-left: 0;
       margin-bottom: 5.1rem; }
       .control__policy-label {
-        justify-content: start;
-        margin-top: 0;
-        font-size: 1.3rem;
-        letter-spacing: 0.015rem; }
-        .control__policy-label::before {
-          width: 1.5rem;
-          height: 1.5rem; }
+        margin-left: 0.1rem;
+        letter-spacing: 0.09rem; }
     .control__button {
       order: 5;
       font-size: 1.3rem;
@@ -2802,7 +2823,15 @@ sup {
   .team__mobile-image {
     display: block; }
   .scroll-up {
-    right: 2rem; } }
+    right: 2rem; }
+  #controlPolicyCheckbox-error {
+    left: 0; }
+  #footerPolicyCheckbox-error {
+    left: 0; } }
+
+@media screen and (max-height: 450px) {
+  .hero {
+    padding-top: 1.5rem; } }
 
 @media screen and (max-height: 600px) {
   .hero__scroll-down {
@@ -2813,6 +2842,10 @@ sup {
     width: 100%; }
   .container {
     width: 95%; }
+    .container__types {
+      width: 90%; }
+    .container__design {
+      width: 90%; }
   .section__style-image {
     width: 340px;
     height: 242px; }
@@ -2821,23 +2854,33 @@ sup {
   .mobile-american {
     display: block; }
   .style__container {
-    width: 98%; }
+    width: 93%; }
   .swiper4 {
     margin-bottom: -15.8rem; }
+  .section-title__text {
+    line-height: 1.71rem;
+    letter-spacing: -0.001rem; }
   .section__design {
     padding-top: 12.7rem; }
   .section__style {
-    padding-left: 0.5rem; } }
+    padding-left: 0.5rem; }
+  .types__card {
+    margin-bottom: 6.4rem; }
+    .types__card-title {
+      margin-bottom: 0.7rem; }
+  .design__text {
+    line-height: 1.74rem !important;
+    margin-bottom: 3.2rem; } }
 
 @media screen and (max-width: 370px) {
   body {
     overflow-x: hidden; }
   .button {
-    min-width: 0; }
+    min-width: 24rem; }
     .button--primary {
-      padding: 1.5rem 5.85rem; }
+      padding: 1.5rem 3rem; }
     .button--outline {
-      padding: 1.5rem 7.2rem;
+      padding: 1.5rem 3rem;
       margin-right: 0; }
   .row {
     align-items: baseline; }
@@ -2857,4 +2900,8 @@ sup {
     margin-bottom: 7.5rem;
     transform: translateX(1.4rem);
     width: 100%;
-    max-width: 23.4rem; } }
+    max-width: 23.4rem; }
+  .modal__close {
+    display: none; }
+  .success__button {
+    align-self: center; } }

@@ -189,7 +189,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
       userEmail: {
         required: true,
         email: true
@@ -231,7 +234,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
       userEmail: {
         required: true,
         email: true
@@ -274,7 +280,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
       controlPolicyCheckbox: "required"
     },
     messages: {
@@ -308,7 +317,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
       userQuestion: {
         required:true,
         minlength: 10
@@ -366,6 +378,7 @@ $(document).ready(function () {
         iconImageSize: [32, 32],
         iconImageOffset: [-5, -38],
     });
+    myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);
     let layer = myMapTemp.layers.get(0).get(0);
 
@@ -458,8 +471,10 @@ $(document).ready(function () {
     },
   });
   
-  $('.control__video').one('mouseenter', () => {
+  $(document).one('scroll', () => {
+    if ($('html, body').scrollTop() > 200){
     $( "<script src=\"https://www.youtube.com/iframe_api\"></script>" ).appendTo( ".control__video" );
+  }
   });
 
   var player;
@@ -473,10 +488,10 @@ $(document).ready(function () {
               'onReady': videoPlay,
             }
           });
-        })
+        });
         
   function videoPlay(event) {
     event.target.playVideo();
-  }
+  };
 
 });

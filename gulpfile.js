@@ -138,3 +138,4 @@ function tinypng(done) {
   // exports.web = imgwebp;
   exports.js = minjs;
   exports.build = series(buildCSS, buildJS, html, php, fonts, tinypng);
+  exports.minhtml = html;

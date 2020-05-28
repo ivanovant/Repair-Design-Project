@@ -65,11 +65,14 @@
       &-title
         padding-top: 3rem
     &__col
-      min-width: 55%
+      min-width: 54%
       transform: translate(4rem, -8.0379rem)
   .col-36
-    width: 23%
-    min-width: 24%
+    width: 25%
+    min-width: 26%
+  .style
+    &__container
+      width: 93%
 @media screen and ( max-width: 992px )
   .background
     &::before
@@ -358,7 +361,7 @@
       margin-top: 0
       background-color: $dark
       padding-top: 0.1rem
-      padding-bottom: 5rem
+      padding-bottom: 20rem
   .title--dark
     color: $dark
   .types
@@ -404,6 +407,12 @@
     &__heading
       max-width: 40rem
       margin-top: 3rem
+  .control
+    &__policy
+      max-width: fit-content
+      margin: auto
+  #controlPolicyCheckbox-error
+    left: 0
 @media screen and ( max-width: 570px )
   .header 
     background: $mobile-dark
@@ -558,9 +567,6 @@
         margin-bottom: 0.9rem
         &:first-of-type
           margin-bottom: 5.2rem
-    &__policy
-      padding-right: 0
-      margin-bottom: 5.1rem
       &-label
         justify-content: start
         margin-top: 0
@@ -570,6 +576,14 @@
         &::before
           width: 1.5rem
           height: 1.5rem
+    &__policy
+      max-width: 100%
+      margin-top: -1rem
+      margin-left: 0
+      margin-bottom: 5.1rem
+      &-label
+        margin-left: 0.1rem
+        letter-spacing: 0.09rem
     &__button
       order: 5
       font-size: 1.3rem
@@ -777,7 +791,13 @@
       display: block
   .scroll-up
     right: 2rem
-
+  #controlPolicyCheckbox-error
+    left: 0
+  #footerPolicyCheckbox-error
+    left: 0
+@media screen and ( max-height: 450px )
+  .hero
+    padding-top: 1.5rem
 @media screen and ( max-height: 600px )
   .hero
     &__scroll-down
@@ -788,6 +808,10 @@
       width: 100%
   .container
     width: 95%
+    &__types
+      width: 90%
+    &__design
+      width: 90%
   .section__style-image
     width: 340px
     height: 242px
@@ -797,23 +821,36 @@
   .mobile-american
     display: block
   .style__container
-    width: 98%
+    width: 93%
   .swiper4
     margin-bottom: -15.8rem
   .section
+    &-title
+      &__text
+        line-height: 1.71rem
+        letter-spacing: -0.001rem
     &__design
       padding-top: 12.7rem
     &__style
       padding-left: 0.5rem
+  .types
+    &__card
+      margin-bottom: 6.4rem
+      &-title
+        margin-bottom: 0.7rem
+  .design
+    &__text
+      line-height: 1.74rem !important
+      margin-bottom: 3.2rem
 @media screen and ( max-width: 370px )
   body
     overflow-x: hidden
   .button
-    min-width: 0
+    min-width: 24rem
     &--primary
-      padding: 1.5rem 5.85rem
+      padding: 1.5rem 3rem
     &--outline
-      padding: 1.5rem 7.2rem
+      padding: 1.5rem 3rem
       margin-right: 0
   .row
     align-items: baseline
@@ -840,3 +877,9 @@
       transform: translateX(1.4rem)
       width: 100%
       max-width: 23.4rem
+  .modal
+    &__close
+      display: none
+  .success
+    &__button
+      align-self: center
