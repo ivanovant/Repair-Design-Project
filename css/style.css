@@ -779,18 +779,6 @@ a {
 .contacts__phone {
   margin-right: 3.1rem; }
 
-.animate__animated {
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s; }
-
-.animated {
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s; }
-
 .hero {
   position: relative;
   display: flex;
@@ -967,9 +955,13 @@ a {
 .swiper-button-prev {
   left: 0;
   background: url(../img/arrow-prev.svg) no-repeat center; }
+  .swiper-button-prev:hover {
+    background: url(../img/arrow-prev-hover.svg) no-repeat center; }
 
 .swiper-button-next {
   background: url(../img/arrow-next.svg) no-repeat center; }
+  .swiper-button-next:hover {
+    background: url(../img/arrow-next-hover.svg) no-repeat center; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
@@ -2293,7 +2285,11 @@ sup {
     .swiper-button-prev:active, .swiper-button-next:active {
       border: none;
       outline: none; }
-  .swiper-slide__text {
+  .swiper-button-prev:hover {
+    background: url(../img/arrow-prev.svg) no-repeat center; }
+  .swiper-button-next:hover {
+    background: url(../img/arrow-next.svg) no-repeat center; }
+  .swiper-button-slide__text {
     flex-basis: 31%; }
   .logo__link:hover {
     color: #E3B873;
@@ -2734,8 +2730,6 @@ sup {
     margin-bottom: 2.8rem; }
   .design__card {
     margin-bottom: 18.3rem; }
-    .design__card:only-of-type {
-      margin-bottom: 18.3rem; }
   .design-card__text {
     position: relative;
     max-width: 22.5rem;
@@ -2916,15 +2910,13 @@ sup {
 
 @media screen and (max-width: 400px) {
   .control__text {
-    width: 100%; }
-  .container {
-    width: 95%; }
-    .container__types {
-      width: 90%; }
-    .container__design {
-      width: 90.9%; }
-    .container__footer {
-      width: 90.9%; }
+    width: 100.1%; }
+  .control__section-title {
+    margin-top: -27.4rem; }
+  .container__types {
+    width: 90.4%; }
+  .container__design {
+    width: 90.4%; }
   .section__style-image {
     width: 340px;
     height: 242px; }
@@ -2939,17 +2931,28 @@ sup {
   .section-title__text {
     line-height: 1.71rem;
     letter-spacing: -0.001rem; }
+    .section-title__text--left {
+      line-height: 1.85rem; }
   .section__design {
     padding-top: 12.7rem; }
   .section__style {
     padding-left: 0.5rem; }
   .types__card {
-    margin-bottom: 6.4rem; }
+    margin-bottom: 6.3rem; }
     .types__card-title {
       margin-bottom: 0.7rem; }
   .design__text {
     line-height: 1.74rem !important;
-    margin-bottom: 3.2rem; } }
+    margin-bottom: 3.2rem; }
+  .design__card {
+    margin-bottom: 18.5rem; }
+  .swiper1__image {
+    height: 16.7rem; }
+  .swiper-slide__image {
+    width: 100%;
+    height: 100%; }
+  .card__pricetag {
+    bottom: -1.5rem; } }
 
 @media screen and (max-width: 370px) {
   body {
