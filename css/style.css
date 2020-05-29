@@ -1942,7 +1942,8 @@ sup {
   font-size: 1.5rem;
   letter-spacing: -0.045rem;
   margin-bottom: 1.7rem;
-  font-style: normal; }
+  font-style: normal;
+  text-align: center; }
 
 .section-title__link {
   width: 2rem;
@@ -2902,7 +2903,9 @@ sup {
 
 @media screen and (max-height: 450px) {
   .hero {
-    padding-top: 1.5rem; } }
+    padding-top: 5rem; }
+    .hero::after {
+      display: none; } }
 
 @media screen and (max-height: 600px) {
   .hero__scroll-down {
