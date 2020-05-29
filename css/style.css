@@ -413,8 +413,8 @@ template {
 
 .scroll-up {
   position: fixed;
-  right: 8rem;
-  bottom: 10rem;
+  right: 2rem;
+  bottom: 2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -536,7 +536,7 @@ input.invalid {
 
 #process-user-email-error {
   position: absolute;
-  bottom: 0.75rem;
+  bottom: -0.3rem;
   left: 0;
   color: tomato; }
 

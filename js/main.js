@@ -220,6 +220,7 @@ $(document).ready(function () {
         success: function (response) {
           $(form)[0].reset();
           modal.removeClass('modal--visible');
+          ym(64410109,'reachGoal','modal');
           success.toggleClass('success--visible');
         }
       });
@@ -264,7 +265,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          modal.removeClass('modal--visible');
+          ym(64410109,'reachGoal','process');
           success.toggleClass('success--visible');
         }
       });
@@ -302,6 +303,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
+          ym(64410109,'reachGoal','control');
           success.toggleClass('success--visible');
         }
       });
@@ -347,6 +349,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
+          ym(64410109,'reachGoal','footer');
           success.toggleClass('success--visible');
         }
       });
@@ -374,7 +377,7 @@ $(document).ready(function () {
         balloonContent: 'Вход со двора'
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/location.png',
+        iconImageHref: './img/location.png',
         iconImageSize: [32, 32],
         iconImageOffset: [-5, -38],
     });
@@ -497,6 +500,11 @@ $(document).ready(function () {
   $(document).one('mouseenter', (e) => {
     if (e.currentTarget = 'document') {
       $( "<script type=\"text/javascript\" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, \"script\", \"https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js\", \"ym\"); ym(64410109, \"init\", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src=\"https://mc.yandex.ru/watch/64410109\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>").appendTo('head')
+    }
+  });
+  $(document).one('mouseenter', (e) => {
+    if (e.currentTarget = 'document') {
+      $( "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WZWTP49');</script>").appendTo('head')
     }
   });
 
